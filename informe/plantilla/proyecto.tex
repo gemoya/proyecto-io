@@ -1,0 +1,96 @@
+\documentclass[journal, 10pt]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[dvips]{graphicx}
+\usepackage{url}
+\def\IEEEkeywordsname{Palabras Claves}
+
+\makeatletter
+\long\def\@makecaption#1#2{\ifx\@captype\@IEEEtablestring%
+\footnotesize\begin{center}{\normalfont\footnotesize #1}\\
+{\normalfont\footnotesize\scshape #2}\end{center}%
+\@IEEEtablecaptionsepspace
+\else
+\@IEEEfigurecaptionsepspace
+\setbox\@tempboxa\hbox{\normalfont\footnotesize {#1.}~~ #2}%
+\ifdim \wd\@tempboxa >\hsize%
+\setbox\@tempboxa\hbox{\normalfont\footnotesize {#1.}~~ }%
+\parbox[t]{\hsize}{\normalfont\footnotesize \noindent\unhbox\@tempboxa#2}%
+\else
+\hbox to\hsize{\normalfont\footnotesize\hfil\box\@tempboxa\hfil}\fi\fi}
+\makeatother
+
+
+\begin{document}
+\title{\textit{Título}, sin ptos}
+\author{Nombre Integrantes.\\ Universidad Técnica Federico Santa María \\
+Avenida España 1680, Valparaíso, Chile \\
+alumno.genérico@alumnos.usm.cl }
+\maketitle
+
+\section*{Evaluación}
+
+\begin{tabular}{ll}
+Resumen: & \underline{\hspace{0.5cm}}/5 \\
+Palabras Claves: & \underline{\hspace{0.5cm}}/5 \\
+Introducción: & \underline{\hspace{0.5cm}}/5 \\
+Estado del Arte:  & \underline{\hspace{0.5cm}}/15 \\
+Modelo Matemático: &  \underline{\hspace{0.5cm}}/35 \\
+Experimentación: &  \underline{\hspace{0.5cm}}/15 \\
+Análisis de Resultados: &  \underline{\hspace{0.5cm}}/10 \\
+Conclusiones y Trabajo Futuro: &  \underline{\hspace{0.5cm}}/10 \\
+Referencias: & \underline{\hspace{0.5cm}}/5 \\
+ &  \\
+\textbf{Nota Final}:   & \underline{\hspace{0.5cm}}/105 \\
+&  \\
+\end{tabular}
+
+\begin{abstract}
+\boldmath Resumen de su proyecto. Indicando a grandes rasgos que problema resolvieron, que hicieron, etc. Debe ser breve, no más de 8 o 9 líneas de extensión. \textbf{(5 ptos.)}
+\end{abstract}
+
+\begin{IEEEkeywords}
+Palabras claves del proyecto, se puede considerar como si se usara un buscador, debería ser encontrado al usar esas palabras. Deber ser específico respecto al problema y maneras de resolver. \textbf{(5 ptos.)}
+\end{IEEEkeywords}
+
+\section{Introducción}
+En que consiste el problema, sobre que necesidad fue construido y comentarios generales. Preguntas claves: ¿En qué consiste mi problema?, ¿Cuales son sus origines?, ¿Qué se quiere solucionar?\\
+Además, debe ser presentada una motivación (¿Por que es importante el problema?, ¿En qué contexto se busca la solución?) \textbf{(5 ptos)} .\\
+
+\section{Estado del arte}
+Desarrollo del problema, mostrar sus componentes y que significa cada una de ellas, además comentar que tipo de técnicas se han implementado para solucionarlo, explicando sus ventajas y defectos, además comentar sobre problemas similares o análogos. Preguntas claves: ¿Qué conceptos componen mi problema?, ¿Qué técnicas se han implementado?, ¿Cuales son sus ventajas y desventajas?, ¿Cuál es la importancia o que hace interesante el problema que estoy tratando?. En esta sección se incluye la gran mayoría de las referencias. Se recomienda realizar un barrido cronológico de como se ha tratado resolver el problema. \textbf{(15 ptos)}
+
+\section{Modelo Matemático o LP}
+\subsection{Formulación Estándar}
+Planteamiento matemático del problema que tratamos, el modelo con sus fórmulas, variables y restricciones, es decir, la formalización matemática de lo explicado anteriormente. También puede ser visto como una abstracción de lo que se desea resolver con sus justificaciones correspondientes. \textbf{(20 ptos)}
+
+\subsection{Extensión}
+Planteamiento de un modelo mejorado y/o extendido. Explicar el sentido que tiene la extensión y su explicación formal correspondiente. Justificar el nuevo modelo con respecto al estándar. \textbf{(15 puntos)}
+
+\section{Experimentación}
+\subsection{Entorno (Hardware y Software)}
+Se debe detallar el \textit{software} y \textit{hardware} utilizado. Además, configuraciones y parámetros utilizados tanto en el modelo como en el \textit{Solver} utilizado (En este caso el solver a utilizar será LINGO). \textbf{(5 puntos)}
+\subsection{Resultados modelo estándar} 
+Reportar resultados obtenidos, además de los tiempos de ejecución. \textbf{(5 puntos)}
+
+\subsection{Resultados modelo extendido}
+Reportar resultados obtenidos, además de los tiempos de ejecución. \textbf{(5 puntos)}
+
+\section{Análisis de Resultados}
+Análisis de resultados del modelo estándar y del modelo extendido de manera independiente. Interpretar el comportamiento de los resultados. Luego realizar una comparación entre ambos modelos. \textbf{(10 puntos)}
+
+\section{Conclusiones y trabajo futuro}
+
+Que se puede rescatar de todo lo anterior, sus resultados e inferencias. Preguntas claves ¿Qué se aprendió sobre la problemática?, ¿Qué se podría hacer a futuro?. \textbf{(10 ptos.)}
+
+\section{Referencias}
+
+De donde obtuvo la información. Si fue sacada de una página web colocar el enlace directo a la información (es decir, google y wikipedia, este último al menos sin ninguna otra especificación, NO son referencias válidas y su mención será penalizada con 0 ptos. en este ítem), si se obtuvo de un paper usar el titulo, autores y año de publicación y si fue sacada de un libro usar el título, nombre del autor, edición y las páginas correspondientes. \textbf{(5 ptos.)} Ejemplo \cite{Winston:1994} \cite{HillierLiebermann:1991}.\\
+
+\textit{En esta sección solo van las referencia, no se incluye ningún tipo de texto adicional. Y \textbf{muy importante}: deben aprender a referenciar libros, papers, Links de internet, etc. Es su trabajo averiguar el formato adecuado.}
+
+\bibliographystyle{plain}
+\bibliography{bibliografia}
+\end{document}
