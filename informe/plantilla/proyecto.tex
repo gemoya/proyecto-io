@@ -66,7 +66,15 @@ El problema se inició en la Universidad de Lancaster, Reino Unido, en los años
 
 El problema se plantea de la siguiente forma. Un concierto consta de nueve piezas de música, de diferente duraciones cada una, con una combinación diferente de los cinco miembros de la orquesta.
 
-Las personas llegan a los ensayos inmediatamente antes de la primera pieza en la que tocarán y se van inmediatamente después de la última pieza pieza que tocan. El problema consiste en idear el orden que minimice la espera de las personas que van a tocar
+Las personas llegan a los ensayos inmediatamente antes de la primera pieza en la que tocarán y se van inmediatamente después de la última pieza pieza que tocan. El problema consiste en organizar el orden que minimice la espera de las personas que van a tocar; es decir, la suma del tiempo total que esperan las personas, para poder tocar, debe ser mínimo.
+
+En el año 1993, Cheng, Diamond y Ling [1] plantearon un problema parecido. El problema ocurre cuando se está grabando una película. Diferentes días de grabación requieren diferentes elencos, y a los elencos se les debe pagar mientras estén presentes (ya sea esperando o actuando). Por lo tanto, el objetivo en este problema, es minimizar el tiempo de espera del elenco, para que así, se les pague lo menos posible por `tiempo no producido'.
+
+El primer enfoque que se conoce para resolver éste problema, era un algoritmo de Branch and Bound, que es NP-duro, entonces, para reducir el tiempo de cálculo de Branch and Bound, (Cheng et al., 1993) se desarrolló un método heurístico [1]. Nordström y Tufekci (1994) [2], propusieron un algoritmo que combina una heurística llamada `pairwise interchange' con un simple algoritmo de genética, para resolver el problema propuesto por Cheng (1993) [1], éste algoritmo superó al propuesto por Cheng et al. (1993) [1], en términos de calidad de las soluciones y en el tiempo computacional.
+
+García de la Banda, Stucky y Chu (2011)[3], aplicaron programación dinámica al problema de producción de cine. Kochetov (2011)[4] desarrolló tres nuevos algoritmos heurísticos, estos son, un `annealing algorithm', `un stochastic tabu search algorithm'y un algoritmo de búsqueda local genética. Estas heurísticas propuestas, pudieron encontrar la solución a los pocos minutos. Bomsdorf y Derigs (2008)[4], estudiaron un problema similar al del rodaje de la pelicula, ellos tomaron en cuenta otros factores un poco más realistas, como tiempo de trabajo, escena anteriormente grabada, disponibilidad de recursos, disminuir el tiempo de finalización (`makespan') y minimizar los costos de los recursos. Se aplicó una técnica de busqueda codiciosa indirecta (`greedy indirect search technique') para resolver el problema. Éste método, proporcionó horarios más rápidos y mejor que el método de programación manual.
+
+
 
 \section{Modelo Matemático o LP}
 \subsection{Formulación Estándar}

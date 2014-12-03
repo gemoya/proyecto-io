@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.30)  3 DEC 2014 15:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.30)  3 DEC 2014 17:48
 entering extended mode
 **proyecto.tex
 (C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.tex
@@ -455,13 +455,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 
-LaTeX Warning: Citation `Winston:1994' on page 2 undefined on input line 96.
+LaTeX Warning: Citation `Winston:1994' on page 2 undefined on input line 104.
 
 
-LaTeX Warning: Citation `HillierLiebermann:1991' on page 2 undefined on input line 96.
+LaTeX Warning: Citation `HillierLiebermann:1991' on page 2 undefined on input line 104.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
@@ -478,25 +478,23 @@ l.3 \end{thebibliography}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-) [2
-
-] (C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.aux)
+) [2] (C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2795 strings out of 493921
- 38873 string characters out of 3144885
- 103472 words of memory out of 3000000
- 6072 multiletter control sequences out of 15000+200000
+ 2796 strings out of 493921
+ 38881 string characters out of 3144885
+ 106472 words of memory out of 3000000
+ 6073 multiletter control sequences out of 15000+200000
  39123 words of font info for 74 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,9n,27p,825b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,27p,954b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
 times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on proyecto.pdf (2 pages, 66040 bytes).
+Output written on proyecto.pdf (2 pages, 69024 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
