@@ -24,10 +24,10 @@
 
 
 \begin{document}
-\title{\textit{Título}, sin ptos}
-\author{Nombre Integrantes.\\ Universidad Técnica Federico Santa María \\
+\title{\textit{Solving The Rehearsal Scheduling Problem}}
+\author{Camilo Valenzuela, Martín Villanueva, German Ortiz Gonzalo Moya \\ Universidad Técnica Federico Santa María \\
 Avenida España 1680, Valparaíso, Chile \\
-alumno.genérico@alumnos.usm.cl }
+cvalenzu@alumnos.inf.utfsm.cl mavillan@alumnos.inf.utfsm.cl gortiz@alumnos.inf.utfsm.cl gemoya@inf.utfsm.cl}
 \maketitle
 
 \section*{Evaluación}
@@ -61,6 +61,25 @@ Además, debe ser presentada una motivación (¿Por que es importante el problem
 
 \section{Estado del arte}
 Desarrollo del problema, mostrar sus componentes y que significa cada una de ellas, además comentar que tipo de técnicas se han implementado para solucionarlo, explicando sus ventajas y defectos, además comentar sobre problemas similares o análogos. Preguntas claves: ¿Qué conceptos componen mi problema?, ¿Qué técnicas se han implementado?, ¿Cuales son sus ventajas y desventajas?, ¿Cuál es la importancia o que hace interesante el problema que estoy tratando?. En esta sección se incluye la gran mayoría de las referencias. Se recomienda realizar un barrido cronológico de como se ha tratado resolver el problema. \textbf{(15 ptos)}
+
+El problema se inició en la Universidad de Lancaster, Reino Unido, en los años 70. Se sabe que el problema fue formulado por un miembro del personal del departamento de ciencias de la administración, que a la vez era miembro de una orquesta de aficionados, mientras esperaba su turno para tocar durante un ensayo.
+
+El problema se plantea de la siguiente forma. Un concierto consta de nueve piezas de música, de diferente duraciones cada una, con una combinación diferente de los cinco miembros de la orquesta.
+
+Las personas llegan a los ensayos inmediatamente antes de la primera pieza en la que tocarán y se van inmediatamente después de la última pieza pieza que tocan. El problema consiste en organizar el orden que minimice la espera de las personas que van a tocar; es decir, la suma del tiempo total que esperan las personas, para poder tocar, debe ser mínimo.
+
+En el año 1993, Cheng, Diamond y Ling [1] plantearon un problema parecido. El problema ocurre cuando se está grabando una película. Diferentes días de grabación requieren diferentes elencos, y a los elencos se les debe pagar mientras estén presentes (ya sea esperando o actuando). Por lo tanto, el objetivo en este problema, es minimizar el tiempo de espera del elenco, para que así, se les pague lo menos posible por `tiempo no producido'.
+
+El primer enfoque que se conoce para resolver éste problema, era un algoritmo de Branch and Bound, que es NP-duro, entonces, para reducir el tiempo de cálculo de Branch and Bound, (Cheng et al., 1993) se desarrolló un método heurístico [1]. Nordström y Tufekci (1994) [2], propusieron un algoritmo que combina una heurística llamada `pairwise interchange' con un simple algoritmo de genética, para resolver el problema propuesto por Cheng (1993) [1], éste algoritmo superó al propuesto por Cheng et al. (1993) [1], en términos de calidad de las soluciones y en el tiempo computacional.
+
+García de la Banda, Stucky y Chu (2011)[3], aplicaron programación dinámica al problema de producción de cine. Kochetov (2011)[4] desarrolló tres nuevos algoritmos heurísticos, estos son, un `annealing algorithm', `un stochastic tabu search algorithm'y un algoritmo de búsqueda local genética. Estas heurísticas propuestas, pudieron encontrar la solución a los pocos minutos. Bomsdorf y Derigs (2008)[4], estudiaron un problema similar al del rodaje de la pelicula, ellos tomaron en cuenta otros factores un poco más realistas, como tiempo de trabajo, escena anteriormente grabada, disponibilidad de recursos, disminuir el tiempo de finalización (`makespan') y minimizar los costos de los recursos. Se aplicó una técnica de busqueda codiciosa indirecta (`greedy indirect search technique') para resolver el problema. Éste método, proporcionó horarios más rápidos y mejor que el método de programación manual.
+
+Smith (2003)[5], tomó el problema de la programación de producción de cine y lo adaptó al problema de programación de la orquesta (problema que estamos estudiando). Éste problema fue resuelto como un problema de satisfacción de restricciones. Gregory, Miller y Prosser (2004)[6], utilizaron técnicas de planificación y verificación de modelos para resolver el problema. Se compararon las dos técnicas, con la propuesta por Smith (2003)[5], el resultado mostró que la técnica de planificación superó la técnica de satisfacción de restricciones y la verificación de modelos en términos de tiempo de cálculo.
+
+Hasta entonces, los 'Rehearsal Problem' anteriores se basaban en el caso donde las piezas musicales se encuentran secuenciadas desde la primera hasta la última. Sakulson and Tharmmaphornphilas (2011)[], considerando piezas musicales de igual duración de ensayo, a través de una casilla. Ellos optaron por disponer de varios días para los ensayos, y en base a esto poder minimizar el número de días en que los músicos deben estar presentes. Además con la intención de minimizar el tiempo de espera de cada músico en cada día en particular.
+
+Para nuestro caso, distinto del anterior, se considerarán piezas musicales de distinta duración, con limitación tanto en los slots de ensayo como en los días de ensayo. También se asume que la paga de los músicos es sólo para el día en que asisten a ensayar. Distinto del modelo presentado por  Cheng et al. (1993), quien considera pagos de músicos distintos, ahora se presentará el problema con montos de pago iguales para los músicos, es decir que la paga por día es igual para cada músico. Lo anterior permite reducir el problema a minimizar los días que deben presentarse los músicos a ensaya, buscando además la satisfacción de los músicos, reduciendo el tiempo de espera en el día de cada uno, para tocar la pieza que deben.
+
 
 \section{Modelo Matemático o LP}
 \subsection{Formulación Estándar}
