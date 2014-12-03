@@ -57,14 +57,112 @@ Palabras claves del proyecto, se puede considerar como si se usara un buscador, 
 
 \section{Introducción}
 En que consiste el problema, sobre que necesidad fue construido y comentarios generales. Preguntas claves: ¿En qué consiste mi problema?, ¿Cuales son sus origines?, ¿Qué se quiere solucionar?\\
-Además, debe ser presentada una motivación (¿Por que es importante el problema?, ¿En qué contexto se busca la solución?) \textbf{(5 ptos)} .\\ "The Rehearsal Problem" trata la planificación de los ensayos para un concierto, el cual consiste de nueve piezas de música de diferentes duraciones, donde cada una involucra una combinación distinta de músicos. Estos músicos pueden llegar pueden llegar a los ensayos inmediatamente antes de que les toque ensayar, e irse inmediatamente después de participar en su última pieza. El fin del problema es diseñar un orden específico de las piezas musicales con el fin de minimizar el tiempo de espera de los músicos para tocar en su ensayo, en otras palabras el tiempo en el cual los ensayistas estan presentes pero no estan tocando. 
+Además, debe ser presentada una motivación (¿Por que es importante el problema?, ¿En qué contexto se busca la solución?) \textbf{(5 ptos)} .\\ \textit{``The Rehearsal Problem"} trata la planificación de los ensayos para un concierto, el cual consiste de nueve piezas de música de diferentes duraciones, donde cada una involucra una combinación distinta de músicos. Estos músicos pueden llegar pueden llegar a los ensayos inmediatamente antes de que les toque ensayar, e irse inmediatamente después de participar en su última pieza. El fin del problema es diseñar un orden específico de las piezas musicales con el fin de minimizar el tiempo de espera de los músicos para tocar en su ensayo, en otras palabras el tiempo en el cual los ensayistas estan presentes pero no estan tocando. 
 
 \section{Estado del arte}
 Desarrollo del problema, mostrar sus componentes y que significa cada una de ellas, además comentar que tipo de técnicas se han implementado para solucionarlo, explicando sus ventajas y defectos, además comentar sobre problemas similares o análogos. Preguntas claves: ¿Qué conceptos componen mi problema?, ¿Qué técnicas se han implementado?, ¿Cuales son sus ventajas y desventajas?, ¿Cuál es la importancia o que hace interesante el problema que estoy tratando?. En esta sección se incluye la gran mayoría de las referencias. Se recomienda realizar un barrido cronológico de como se ha tratado resolver el problema. \textbf{(15 ptos)}
 
 \section{Modelo Matemático o LP}
 \subsection{Formulación Estándar}
-Planteamiento matemático del problema que tratamos, el modelo con sus fórmulas, variables y restricciones, es decir, la formalización matemática de lo explicado anteriormente. También puede ser visto como una abstracción de lo que se desea resolver con sus justificaciones correspondientes. \textbf{(20 ptos)}
+A continuación se presenta una solución general al \textit{Rehearsal Scheduling Problem} ocupando programación lineal entera. Este enfoque consiste en asignar las $m$ piezas que conforman el ensayo (en donde participan $p$ músicos) en una secuencia de $n$ \textit{slots} (casilleros) que minimicen el tiempo de espera. Se consideran los indices $(i,j,k)$ de modo tal que
+
+\begin{flalign*}
+& \text{\textbf{Indices:}} \\
+& i \in \{1,\ldots,m\} = \mathcal{I} \ \ \text{indices de ensayos} \\
+& j \in \{1,\ldots,n\} = \mathcal{J} \ \ \text{indices de slots} \\
+& k \in \{1,\ldots,p\} = \mathcal{K} \ \ \text{indices de músicos}
+\end{flalign*}
+
+en donde $n \geq m$, pues se considera un slot por cada unidad de tiempo, esto es, deben haber tantos slots como unidades de tiempo total tome el ensayo completo. Los parámetros del problema son los siguientes
+
+\begin{flalign*}
+& \text{\textbf{Parámetros:}} \\
+& piezas_{ki} = 1 \text{ ssi músico }k \text{ toca en el ensayo }i \text{, } 0 \text{ eoc.} \\
+& \delta_{i}  \text{ duración del ensayo } i \\
+\end{flalign*}
+
+de forma natural se definen las siguientes varaibles
+
+\begin{flalign*}
+& \text{\textbf{Variables:}} \\
+& s_{ij} = 1 \text{ ssi  ensayo } i \text{ va en el slot }j \text{, } 0 \text{ eoc.} \\
+& plays_{kj} = 1 \text{ ssi  músico } k \text{ debe tocar en slot }j \text{, } 0 \text{ eoc.} \\
+& start_{ij} = 1 \text{ ssi  ensayo } i \text{ es ensayado en o antes de slot }j \text{, } 0 \text{ eoc.} \\
+& end_{ij} = 1 \text{ ssi  ensayo } i \text{ es ensayado en o después de slot }j \text{, } 0 \text{ eoc.} \\
+& r_{kj} = 1 \text{ ssi  músico } k \text{ está presente en slot }j \text{, } 0 \text{ eoc.} \\
+& a_{kj} = 1 \text{ ssi  músico } k \text{ arriva en o antes de slot } j \text{, } 0 \text{ eoc.} \\
+& l_{kj} = 1 \text{ ssi  músico } k \text{ se retira en o después de slot } j \text{, } 0 \text{ eoc.} \\
+& w_{kj} = 1 \text{ ssi  músico } k \text{ debe esperar en slot } j \text{, } 0 \text{ eoc.} \\
+\end{flalign*}
+
+como lo que se quiere es minimizar el tiempo de espera total la función objetivo \eqref{eq:FO} es 
+
+\begin{equation} \label{eq:FO}
+\text{Min } z = \sum_{k=1}^{p}\sum_{j=1}^n w_{kj} 
+\end{equation}
+
+notar que se suma sobre slots pues cada uno representa una unidad de tiempo. 
+
+A continuación se detallan las restricciones del modelo:
+
+\begin{itemize}
+
+
+
+\item \textbf{Asignación a slots.} La restricción \eqref{eq:res1} permite determinar los slots donde debe tocar cada músico
+
+\begin{equation} \label{eq:res1}
+	p_{kj} = \sum_{i=1}^m s_{ij} \pi_{ki} \ \ \forall k \in \mathcal{K}, j \in \mathcal{I}
+\end{equation}
+
+básicamente $s_{ij}$ permite sabe si el ensayo $i$ va en el slot $j$, de ser así y si además el músico toca en el ensayo $i$, entonces significa que debe tocar en el slot $j$.
+
+
+
+\item \textbf{Arrivo de músicos}. Para determinar si el músico $k$ llega (ha llegado) el slot $j$ se tienen las siguientes dos reestricciones
+
+\begin{equation}\label{eq:res2} 
+	a_{kj} \leq a_{k,j+1} \ \ \forall k \in \mathcal{K}, j \in \{1,\ldots,n-1\}
+\end{equation}
+
+\begin{equation}\label{eq:res3} 
+	a_{kj} \geq p_{kj} \ \ \forall k \in \mathcal{K}, \forall j \in \mathcal{J}
+\end{equation}
+
+Primero, \eqref{eq:res2} indica recursivamente que el músico $k$ ya ha llegado en el slot $j+1$, si ha llegado en slot el slot $j$ o alguno anterior. Como complemento a dicha recursión \eqref{eq:res3} impone que si el músico toca en el slot $j$, entonces ha llegado. 
+
+
+
+\item \textbf{Salida de músicos}. Para determinar si el músico $k$ se va al final (o después) del slot $j$ se tienen las siguientes dos reestricciones
+
+\begin{equation}\label{eq:res4} 
+	l_{kj} \geq l_{k,j+1} \ \ \forall k \in \mathcal{K}, \ \forall j \in \{1,\ldots,n-1\}
+\end{equation}
+
+\begin{equation}\label{eq:res5} 
+	l_{kj} \geq p_{kj} \ \ \forall k \in \mathcal{K}, \forall j \in \mathcal{J}
+\end{equation}
+
+Muy similar al caso anterior, \eqref{eq:res4} el músico se va al final del slot $j$ (o después), 
+
+\item \textbf{Presencia de músicos}. Un músico está presente en el slot $j$, si llega en el slot $j$ (o antes) y se va al final (o después) del slot. Esto quede representado en \eqref{eq:res6}
+
+\begin{equation}\label{eq:res6} 
+	r_{kj} \geq a_{kj} + l_{kj} \ \ \forall k \in \mathcal{K}, \forall j \in \mathcal{J}
+\end{equation}
+
+
+
+\item \textbf{asdf}
+
+\item \textbf{asdf}
+
+\item \textbf{asdf}
+
+\item \textbf{asdf}
+  	
+\end{itemize}  
+
 
 \subsection{Extensión}
 Planteamiento de un modelo mejorado y/o extendido. Explicar el sentido que tiene la extensión y su explicación formal correspondiente. Justificar el nuevo modelo con respecto al estándar. \textbf{(15 puntos)}
