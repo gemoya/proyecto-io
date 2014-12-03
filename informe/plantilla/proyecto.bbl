@@ -1,3 +1,19 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{ref1}
+T.~C.~E. Cheng, J.~E. Diamond, and B.~M.~T. Lin.
+\newblock Optimal scheduling in film product to minimize talent hold cost.
+\newblock {\em Optimization Theory and Application}, page~3, 1993.
+
+\bibitem{ref3}
+Maria Garcia De La~Banda, Peter~J Stuckey, and Geoffrey Chu.
+\newblock Solving talent scheduling with dynamic programming.
+\newblock {\em INFORMS Journal on Computing}, 23(1):120--137, 2011.
+
+\bibitem{ref2}
+Anna-Lena Nordström and Suleyman Tufekci.
+\newblock A genetic algorithm for the talent scheduling problem.
+\newblock {\em Computers & Operations Research}, 21(8):927 -- 940, 1994.
+\newblock Heuristic, Genetic and Tabu Search.
 
 \end{thebibliography}

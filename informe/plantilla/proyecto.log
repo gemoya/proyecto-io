@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.30)  3 DEC 2014 18:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.30)  3 DEC 2014 20:24
 entering extended mode
 **proyecto.tex
 (C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.tex
@@ -424,29 +424,80 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 \Gin@req@height=\dimen127
 \Gin@req@width=\dimen128
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+
+Package epstopdf Warning: Drivers other than `pdftex.def' are not supported.
+
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Try loading font information for U+msa on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 35.
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -455,46 +506,34 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 
-LaTeX Warning: Citation `Winston:1994' on page 2 undefined on input line 106.
+LaTeX Warning: Citation `Winston:1994' on page 2 undefined on input line 107.
 
 
-LaTeX Warning: Citation `HillierLiebermann:1991' on page 2 undefined on input line 106.
+LaTeX Warning: Citation `HillierLiebermann:1991' on page 2 undefined on input line 107.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-(C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.bbl
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3 \end{thebibliography}
-                         
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-) [2] (C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.aux)
+(C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.bbl) [2]
+(C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2796 strings out of 493921
- 38881 string characters out of 3144885
- 106472 words of memory out of 3000000
- 6073 multiletter control sequences out of 15000+200000
- 39123 words of font info for 74 fonts, out of 3000000 for 9000
+ 3258 strings out of 493921
+ 47043 string characters out of 3144885
+ 117063 words of memory out of 3000000
+ 6496 multiletter control sequences out of 15000+200000
+ 40259 words of font info for 75 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,9n,27p,954b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,9n,27p,963b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
 times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on proyecto.pdf (2 pages, 69612 bytes).
+Output written on proyecto.pdf (2 pages, 71677 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
