@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.30)  4 DEC 2014 02:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.30)  4 DEC 2014 02:58
 entering extended mode
 **proyecto.tex
 (C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.tex
@@ -509,9 +509,13 @@ Overfull \hbox (18.93428pt too wide) in paragraph at lines 158--158
 [] 
  []
 
-[2]
+
+Underfull \vbox (badness 1424) has occurred while \output is active []
+
+ [2]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 280.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
@@ -542,7 +546,7 @@ cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
 es/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on proyecto.pdf (4 pages, 142018 bytes).
+Output written on proyecto.pdf (4 pages, 141773 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
