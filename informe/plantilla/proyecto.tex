@@ -67,10 +67,12 @@ Hasta entonces, los `Rehearsal Problem' anteriores se basaban en el caso donde l
 A diferencia del anterior, se considerarán piezas musicales de distinta duración, con limitación tanto en los slots de ensayo como en los días de ensayo. Por lo tanto, malas asignaciones de los días de ensayo, pueden conducir a una solución no factible. 
 Distinto del modelo presentado por  Cheng et al. (1993)\cite{ref1}, quien considera costos por músicos, ahora se presentará el problema con costos iguales para los músicos, es decir que la paga por día es igual para cada músico. Así, para minimizar el tiempo de espera, la meta es reducir al mínimo la rotación entre los músicos.
 
+Es importante señalar la contribución que realizaron Sakulson and Tharmmaphornphilas (2014)\cite{ref9}, la cual sirve de base para la resolución al problema que fue realizado en el presente documento.
+
 
 \section{Modelo Matemático o LP}
 \subsection{Formulación Estándar}
-A continuación se presenta una solución general al \textit{Rehearsal Scheduling Problem} ocupando programación lineal entera. Este enfoque consiste en asignar las $m$ piezas que conforman el ensayo (en donde participan $p$ músicos) en una secuencia de $n$ \textit{slots} (casilleros) que minimicen el tiempo de espera. Se consideran los indices $(i,j,k)$ de modo tal que
+A continuación se presenta una solución general al \textit{Rehearsal Scheduling Problem} ocupando programación lineal entera basado en el modelo planteado por Sakulson and Tharmmaphornphilas (2014)\cite{ref9}. Este enfoque consiste en asignar las $m$ piezas que conforman el ensayo (en donde participan $p$ músicos) en una secuencia de $n$ \textit{slots} (casilleros) que minimicen el tiempo de espera. Se consideran los indices $(i,j,k)$ de modo tal que
 
 \begin{flalign*}
 & \text{\textbf{Indices:}} \\
@@ -300,7 +302,7 @@ Como input se utilizó la tabla que se muestra a continuación (instancia más c
 \end{tabular}
 \end{center}
 
-En (Cuadro \ref{table1}) se muestran los valores que no son nulos de las variables de decisión definidas al inicio, que se considera aportan al analisis. 
+En el Cuadro \ref{table1} se muestran los valores que no son nulos de las variables de decisión definidas al inicio, se considera que aportan al análisis.
 \begin{table}
 	\begin{align*}
 		s_{9,1}&   \     1.000000\\        
@@ -345,7 +347,7 @@ El mejor resultado que se obtuvo para la función objetivo fue de \textbf{17}, y
 
 \newpage
 \subsection{Resultados modelo extendido}
-Para el caso del modelo extendido se utilizó la misma instancia del problema resuelta con el estándar, pero ahora se asignan los costos correspondientes a cada músico
+Para el caso del modelo extendido se utilizó la misma instancia del problema, resuelta con el modelo estándar, pero ahora se asignan los costos correspondientes a cada músico
 
 \begin{center}
 	\begin{tabular}{cc}
@@ -361,7 +363,7 @@ Para el caso del modelo extendido se utilizó la misma instancia del problema re
 
 El modelo extendido demoró casi el doble que el modelo estándar, con un tiempo de ejecución total de \textbf{3 hr : 10 min : 02 seg} y un costo mínimo de la función objetivo de \textbf{32}. 
 
-En (Cuadro \ref{table2}) se muestran las mismas variables que en el caso estándar, pero con los resultados obtenidos del modelo extendido. 
+En el Cuadro \ref{table2} se muestran las mismas variables que en el caso estándar, pero con los resultados obtenidos del modelo extendido.
 
 \begin{table}%
 	\begin{align*}
@@ -421,7 +423,7 @@ $$ 9\rightarrow4\rightarrow2\rightarrow1\rightarrow5\rightarrow6\rightarrow8\rig
 \subsection{Análisis General}
 	El tiempo de ejecución de los dos modelos se debe a la gran cantidad de variables que se usaron en el modelo, y al método que utiliza el software \emph{LINGO} para resolver el problema, que en este caso es \emph{Branch and Bound}, el cual depende mucho del orden en que se va a recorriendo el árbol de resultados. 
 	
-	En relación al orden de las piezas, se observan diferencias en cómo los distintos modelos organizan las piezas, pero esto se debe a que cada modelo apunta a cosas distintas; uno minimiza el tiempo de espera total y el segundo debe minimizar el costo a pagar por los músicos cuando estos están esperando.
+	En relación al orden de las piezas, se observan diferencias en cómo los distintos modelos organizan las piezas, pero esto se debe a que cada modelo apunta a cosas distintas. uno minimiza el tiempo de espera total y el segundo debe minimizar el costo a pagar por los músicos cuando estos están esperando.
 
 
 \section{Conclusiones y trabajo futuro}
