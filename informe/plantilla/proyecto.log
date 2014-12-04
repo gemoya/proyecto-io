@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.30)  3 DEC 2014 20:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.30)  3 DEC 2014 21:06
 entering extended mode
 **proyecto.tex
 (C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.tex
@@ -505,44 +505,34 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
-Overfull \hbox (20.6141pt too wide) in paragraph at lines 116--116
+Overfull \hbox (20.6141pt too wide) in paragraph at lines 115--115
 [] 
  []
 
 [2]
-
-LaTeX Warning: Citation `Winston:1994' on page 3 undefined on input line 208.
-
-
-LaTeX Warning: Citation `HillierLiebermann:1991' on page 3 undefined on input line 208.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
  []
 
 (C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.bbl) [3]
-(C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+(C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.aux) ) 
 Here is how much of TeX's memory you used:
- 3264 strings out of 493921
- 47097 string characters out of 3144885
- 121063 words of memory out of 3000000
- 6503 multiletter control sequences out of 15000+200000
+ 3268 strings out of 493921
+ 47104 string characters out of 3144885
+ 120063 words of memory out of 3000000
+ 6507 multiletter control sequences out of 15000+200000
  39181 words of font info for 74 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,11n,27p,963b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times
-/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on proyecto.pdf (3 pages, 132442 bytes).
+ 42i,11n,27p,980b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dv
+ips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
+es/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/urw/times/utmri8a.pfb>
+Output written on proyecto.pdf (3 pages, 134562 bytes).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

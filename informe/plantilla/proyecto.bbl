@@ -5,15 +5,46 @@ T.~C.~E. Cheng, J.~E. Diamond, and B.~M.~T. Lin.
 \newblock Optimal scheduling in film product to minimize talent hold cost.
 \newblock {\em Optimization Theory and Application}, page~3, 1993.
 
-\bibitem{ref3}
-Maria Garcia De La~Banda, Peter~J Stuckey, and Geoffrey Chu.
-\newblock Solving talent scheduling with dynamic programming.
-\newblock {\em INFORMS Journal on Computing}, 23(1):120--137, 2011.
-
 \bibitem{ref2}
 Anna-Lena Nordström and Suleyman Tufekci.
 \newblock A genetic algorithm for the talent scheduling problem.
 \newblock {\em Computers and Operations Research}, 21(8):927 -- 940, 1994.
 \newblock Heuristic, Genetic and Tabu Search.
+
+\bibitem{ref3}
+Maria Garcia De La~Banda, Peter~J Stuckey, and Geoffrey Chu.
+\newblock Solving talent scheduling with dynamic programming.
+\newblock {\em INFORMS Journal on Computing}, 23(1):120--137, 2011.
+
+\bibitem{ref4}
+Yury Kochetov.
+\newblock Iterative local search methods for the talent scheduling problem.
+\newblock In {\em Proceedings of 1st international symposium and 10th Balkan
+  conference on operational research, September}, volume~22, pages 282--288,
+  2011.
+
+\bibitem{ref5}
+Felix Bomsdorf and Ulrich Derigs.
+\newblock A model, heuristic procedure and decision support system for solving
+  the movie shoot scheduling problem.
+\newblock {\em Or Spectrum}, 30(4):751--772, 2008.
+
+\bibitem{ref6}
+Barbara~M Smith.
+\newblock Constraint programming in practice: Scheduling a rehearsal.
+\newblock {\em Re-search Report APES-67-2003, APES group}, 2003.
+
+\bibitem{ref7}
+Peter Gregory, Alice Miller, and Patrick Prosser.
+\newblock Solving the rehearsal problem with planning and with model checking.
+\newblock In {\em Proceedings of the Workshop on modelling and solving problems
+  with constraints. Held in conjunction with the 16th European Conference on
+  Artificial Intelligence (ECAI 2004)}, pages 157--171, 2004.
+
+\bibitem{ref8}
+Noppadon Sakulsom and Wipawee Tharmmaphornphilas.
+\newblock A multi-objective music rehearsal scheduling problem.
+\newblock In {\em Proceedings of 12th Asia Pacific Industrial Engineering \&
+  Management Systems Conference (APIEMS 2011)}, 2011.
 
 \end{thebibliography}
