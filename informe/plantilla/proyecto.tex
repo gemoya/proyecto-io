@@ -51,16 +51,16 @@ Referencias: & \underline{\hspace{0.5cm}}/5 \\
 \end{tabular}
 
 \begin{abstract}
-\boldmath Se resolverá ``The Rehearsal Problem'', problema que trata sobre la asignación de músicos de una orquesta, a distinta piezas de ensayos, cada pieza tiene una duración distinta, donde los músicos que no tocan deben esperar que los otros músicos finalicen de tocar la pieza. Se busca minimizar el tiempo de espera entre cada pieza. \textbf{(5 ptos.)}
+\boldmath Se resolverá ``The Rehearsal Problem'', problema que trata sobre la asignación de músicos de una orquesta, a distinta piezas de ensayos y cada pieza tiene una duración distinta. Se busca, utilizando programación lineal entera, minimizar el tiempo de espera para cada músico entre la primera y la última pieza que debe tocar.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Palabras claves del proyecto, se puede considerar como si se usara un buscador, debería ser encontrado al usar esas palabras. Deber ser específico respecto al problema y maneras de resolver. \textbf{(5 ptos.)} Rehearsal scheduling problem ?
+	Rehearsal scheduling problem, programación lineal entera, optimización.
 \end{IEEEkeywords}
 
 \section{Introducción}
 
-\textit{``The Rehearsal Problem"} trata la planificación de los ensayos para un concierto, el cual consiste de nueve piezas de música de diferentes duraciones, donde cada una involucra una combinación distinta de músicos. Estos músicos pueden llegar pueden llegar a los ensayos inmediatamente antes de que les toque ensayar, e irse inmediatamente después de participar en su última pieza. El fin del problema es diseñar un orden específico de las piezas musicales con el fin de minimizar el tiempo de espera de los músicos para tocar en su ensayo, en otras palabras el tiempo en el cual los ensayistas estan presentes pero no estan tocando. 
+\textit{``The Rehearsal Problem"} trata la planificación de los ensayos para un concierto, el cual consiste de nueve piezas de música de diferentes duraciones, donde cada una involucra una combinación distinta de músicos. Estos músicos pueden llegar pueden llegar a los ensayos inmediatamente antes de que les toque ensayar, e irse inmediatamente después de participar en su última pieza. El fin del problema es diseñar un orden específico de las piezas musicales con el fin de minimizar el tiempo de espera de los músicos para tocar en su ensayo, en otras palabras el tiempo en el cual los ensayistas están presentes pero no están tocando. 
 
 \section{Estado del arte}
 
@@ -74,7 +74,7 @@ En el año 1993, Cheng, Diamond y Ling\cite{ref1} plantearon un problema parecid
 
 El primer enfoque que se conoce para resolver éste problema, era un algoritmo de Branch and Bound, que es NP-duro, entonces, para reducir el tiempo de cálculo de Branch and Bound, (Cheng et al., 1993) se desarrolló un método heurístico\cite{ref1}. Nordström y Tufekci (1994)\cite{ref2}, propusieron un algoritmo que combina una heurística llamada `pairwise interchange' con un simple algoritmo de genética, para resolver el problema propuesto por Cheng (1993)\cite{ref1}, éste algoritmo superó al propuesto por Cheng et al. (1993)\cite{ref1}, en términos de calidad de las soluciones y en el tiempo computacional.
 
-García de la Banda, Stucky y Chu (2011)\cite{ref3}, aplicaron programación dinámica al problema de producción de cine. Kochetov (2011)\cite{ref4} desarrolló tres nuevos algoritmos heurísticos, estos son, un `annealing algorithm', `un stochastic tabu search algorithm'y un algoritmo de búsqueda local genética. Estas heurísticas propuestas, pudieron encontrar la solución a los pocos minutos. Bomsdorf y Derigs (2008)\cite{ref5}, estudiaron un problema similar al del rodaje de la película, ellos tomaron en cuenta otros factores un poco más realistas, como tiempo de trabajo, escena anteriormente grabada, disponibilidad de recursos, disminuir el tiempo de finalización (`makespan') y minimizar los costos de los recursos. Se aplicó una técnica de búsqueda codiciosa indirecta (`greedy indirect search technique') para resolver el problema. Éste método, proporcionó horarios más rápidos y mejor que el método de programación manual.
+García de la Banda, Stucky y Chu (2011)\cite{ref3}, aplicaron programación dinámica al problema de producción de cine. Kochetov (2011)\cite{ref4} desarrolló tres nuevos algoritmos heurísticos, estos son, un `annealing algorithm', `un stochastic tabu search algorithm' y un algoritmo de búsqueda local genética. Estas heurísticas propuestas, pudieron encontrar la solución a los pocos minutos. Bomsdorf y Derigs (2008)\cite{ref5}, estudiaron un problema similar al del rodaje de la película, ellos tomaron en cuenta otros factores un poco más realistas, como tiempo de trabajo, escena anteriormente grabada, disponibilidad de recursos, disminuir el tiempo de finalización (`makespan') y minimizar los costos de los recursos. Se aplicó una técnica de búsqueda codiciosa indirecta (`greedy indirect search technique') para resolver el problema. Éste método, proporcionó horarios más rápidos y mejor que el método de programación manual.
 
 Smith (2003)\cite{ref6}, tomó el problema de la programación de producción de cine y lo adaptó al problema de programación de la orquesta (problema que estamos estudiando). Éste problema fue resuelto como un problema de satisfacción de restricciones. Gregory, Miller y Prosser (2004)\cite{ref7}, utilizaron técnicas de planificación y verificación de modelos para resolver el problema. Se compararon las dos técnicas, con la propuesta por Smith (2003)\cite{ref6}, el resultado mostró que la técnica de planificación superó la técnica de satisfacción de restricciones y la verificación de modelos en términos de tiempo de cálculo.
 
