@@ -268,18 +268,18 @@ la restricción \eqref{eq:res13} dice que el ensayo $i$ termina en el slot $j$ (
 
 
 \subsection{Extensión}
-Para la extensión del ``The Rehearsal Problem", observamos que sólo se toma en cuenta el tiempo de espera de los músicos, en cambio en la versión de ``Talent Scheduling Problem" se tiene que cada actor, en nuestro caso seria cada músico, tiene un costo asignado, ya que a cada músico se le paga una cantidad distinta de dinero por hora, generalmente mientras más experiencia más dinero debería ganar, pero si tenemos a las personas que más se les paga esperando el gasto va a ser innecesariamente alto, por lo que tenemos que buscar optimizar el gasto de tener músicos experimentados (o que sean más costosos) esperando.
+Para la extensión del ``The Rehearsal Problem", se observa que lo único que se toma en cuenta es el tiempo de espera de los músicos. Una versión más compleja del problema tratado, corresponde al ``Talent Scheduling Problem"; En este se tiene que cada actor (que corresponde a un músico en el problema de la orquesta) tiene un costo asignado, pues a cada uno se le paga una cantidad distinta de dinero por unidad de tiempo, en donde generalmente mientras más experiencia más dinero debería ganar. Pero si se tiene a las personas de mayor costo esperando, el gasto va a ser necesariamente más alto. Por lo que el objetivo en este problema, es buscar la secuencia en que deben desarrollarse los ensayos, minimizando el gasto total de tener músicos experimentados (o que sean más costosos) esperando.
 
-Si buscamos extender nuestro problema agregando un costo asociado al músico es necesario agregar un nuevo parámetro a nuestro modelo, que es el costo por hora de tener a un músico en la sala de ensayo pero sin tocar.
-	$$c_k : \text{Costo de tener al músico k esperando en el ensayo} $$
+Este problema se extiende de manera natural desde el ``Rehearsal Problem", agregando un costo asociado a cada músico. Por lo tanto  es necesario agregar un nuevo parámetro al modelo, que es precisamente el costo por unidad de tiempo de tener al músico $k$ presente en la orquesta:
+	$$c_k : \text{Costo unitario de tener al músico k presente} $$
 	
-Y nuestra nueva función objetivo buscará minimizar el costo de tener a los músicos esperando, no simplemente su tiempo de espera, por lo que esperamos un resultado diferente al del modelo estándar.
+El modelo es exactamente el mismo, salvo por la función objetivo (dada la similitud de los problemas). La nueva función objetivo buscará minimizar el costo de tener a los músicos esperando (no simplemente su tiempo de espera). Para esto, por cada slot en donde el músico $k$ se encuentre presente pero sin tocar (esperando), la función objetivo suma una cantidad igual al costo del músico ($c_k$)
 
 \begin{equation} \label{eq:FO2}
 \text{Min } z = \sum_{k=1}^{p}\sum_{j=1}^n c_{k} \cdot w_{kj} 
 \end{equation}
 
-Manteniendo las restricciones del modelo estándar, ya siguen el mismo concepto.
+por lo que dependiendo de los costos $c_k$ que se definen en los músicos, se esperaran resultados diferentes al del modelo estándar.
 
 \section{Experimentación}
 \subsection{Entorno (Hardware y Software)}
