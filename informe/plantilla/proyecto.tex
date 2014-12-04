@@ -300,13 +300,13 @@ Para de la implementación del modelo se utilizaron los siguientes elementos de 
 \end{itemize}
 
 \subsection{Resultados modelo estándar} 
-Los resultados importantes para nosotros son el orden en que se deben ensayar las piezas, la función objetivo y el tiempo de ejecución del programa.
+Los resultados de importancia para la experimentación, son el orden en que se deben ensayar las piezas, el valor de la función objetivo y el tiempo de ejecución del programa.
 
-Utilizamos como input inicial la siguiente tabla donde se muestra que músico toca que pieza musical:
+Como input se utilizó la tabla que se muestra a continuación (instancia más conocida del problema), donde se muestran los ensayos en que deben tocar cada músico
 
 \begin{center}
 	\begin{tabular}{c|ccccccccc}
-	Músico \textbackslash Pieza & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\ \hline
+	Músico \textbackslash Ensayo & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\ \hline
 	1 & 1 & 1  & 0 & 1 & 0 & 1 & 1 & 0 & 1\\
 	2 & 1 & 1  & 0 & 1 & 1 & 1 & 0 & 1 & 0\\
 	3 & 1 & 1  & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
@@ -314,55 +314,55 @@ Utilizamos como input inicial la siguiente tabla donde se muestra que músico to
 	5 & 0 & 0  & 1 & 0 & 1 & 1 & 1 & 1 & 0\\ \hline 
 	Duración & 2 & 4 & 1 & 3 & 3 & 2 & 5 & 7 & 6
 \end{tabular}
-
 \end{center}
 
-Solo mostraremos los valores que no son nulos de los que decidimos que son importantes para analizar. (Cuadro \ref{table1})
+En (Cuadro \ref{table1}) se muestran los valores que no son nulos de las variables de decisión definidas al inicio, que se considera aportan al analisis. 
 \begin{table}
 	\begin{align*}
-		s_{9,1}&        1.000000\\        
-		s_{9,2}&        1.000000\\          
-		s_{9,3}&        1.000000\\            
-		s_{9,4}&        1.000000\\           
-		s_{9,5}&        1.000000\\           
-		s_{9,6}&        1.000000\\          
-		s_{4,7}&        1.000000\\        
-		s_{4,8}&        1.000000\\         
-		s_{4,9}&        1.000000\\            
-	 s_{6,10}&        1.000000\\           
-	 s_{6,11}&        1.000000\\            
-	 s_{5,12}&        1.000000\\            
-	 s_{5,13}&        1.000000\\         
-	 s_{5,14}&        1.000000\\            
-	 s_{1,15}&        1.000000\\           
-	 s_{1,16}&        1.000000\\            
-	 s_{2,17}&        1.000000\\         
-	 s_{2,18}&        1.000000\\          
-	 s_{2,19}&        1.000000\\            
-	 s_{2,20}&        1.000000\\            
-	 s_{7,21}&        1.000000\\           
-	 s_{7,22}&        1.000000\\            
-	 s_{7,23}&        1.000000\\            
-	 s_{7,24}&        1.000000\\           
-	 s_{7,25}&        1.000000\\            
-	 s_{8,26}&        1.000000\\           
-	 s_{8,27}&        1.000000\\            
-	 s_{8,28}&        1.000000\\         
-	 s_{8,29}&        1.000000\\         
-	 s_{8,30}&        1.000000\\          
-	 s_{8,31}&        1.000000\\        
-	 s_{8,32}&        1.000000\\       
-	 s_{3,33}&        1.000000 
+		s_{9,1}&   \     1.000000\\        
+		s_{9,2}&   \     1.000000\\          
+		s_{9,3}&   \     1.000000\\            
+		s_{9,4}&   \     1.000000\\           
+		s_{9,5}&   \     1.000000\\           
+		s_{9,6}&   \     1.000000\\          
+		s_{4,7}&   \     1.000000\\        
+		s_{4,8}&   \     1.000000\\         
+		s_{4,9}&   \     1.000000\\            
+	 s_{6,10}&     \   1.000000\\           
+	 s_{6,11}&     \   1.000000\\            
+	 s_{5,12}&     \   1.000000\\            
+	 s_{5,13}&     \   1.000000\\         
+	 s_{5,14}&     \   1.000000\\            
+	 s_{1,15}&     \   1.000000\\           
+	 s_{1,16}&     \   1.000000\\            
+	 s_{2,17}&     \   1.000000\\         
+	 s_{2,18}&     \   1.000000\\          
+	 s_{2,19}&     \   1.000000\\            
+	 s_{2,20}&     \   1.000000\\            
+	 s_{7,21}&     \   1.000000\\           
+	 s_{7,22}&     \   1.000000\\            
+	 s_{7,23}&     \   1.000000\\            
+	 s_{7,24}&     \   1.000000\\           
+	 s_{7,25}&     \   1.000000\\            
+	 s_{8,26}&     \   1.000000\\           
+	 s_{8,27}&     \   1.000000\\            
+	 s_{8,28}&     \   1.000000\\         
+	 s_{8,29}&     \   1.000000\\         
+	 s_{8,30}&     \   1.000000\\          
+	 s_{8,31}&     \   1.000000\\        
+	 s_{8,32}&     \   1.000000\\       
+	 s_{3,33}&     \   1.000000 
 	\end{align*}
 \caption{Resultados modelo estándar}
 \label{table1}
 \end{table}
 
-El resultado optimizado de nuestra función objetivo fue de \textbf{17}, y el tiempo de ejecución del programa fue de \textbf{1hr : 39min : 33seg}.
+El mejor resultado que se obtuvo para la función objetivo fue de \textbf{17}, y el tiempo de ejecución del programa fue de \textbf{1hr : 39min : 33seg}.
 
 \newpage
 \subsection{Resultados modelo extendido}
-Para el caso del modelo extendido utilizamos la misma tabla del caso estándar pero ahora le asignamos costos a cada músico
+Para el caso del modelo extendido se utilizó la misma instancia del problema resuelta con el estándar, pero ahora se asignan los costos correspondientes a cada músico
+
 \begin{center}
 	\begin{tabular}{cc}
 	Músico & Costo \\ \hline
@@ -375,45 +375,45 @@ Para el caso del modelo extendido utilizamos la misma tabla del caso estándar p
 \end{center}
 
 
-El modelo extendido se demoró un poco más que el modelo normal, con un tiempo de ejecución de \textbf{3 hr : 10 min : 02 seg}, un costo mínimo de \textbf{32}. 
+El modelo extendido demoró casi el doble que el modelo estándar, con un tiempo de ejecución total de \textbf{3 hr : 10 min : 02 seg} y un costo mínimo de la función objetivo de \textbf{32}. 
 
-Se muestran las mismas variables que el caso estándar, pero del modelo extendido. (Cuadro \ref{table2})
+En (Cuadro \ref{table2}) se muestran las mismas variables que en el caso estándar, pero con los resultados obtenidos del modelo extendido. 
 
 \begin{table}%
 	\begin{align*}
-		s_{9,1}&        1.000000\\        
-		s_{9,2}&        1.000000\\          
-		s_{9,3}&        1.000000\\            
-		s_{9,4}&        1.000000\\           
-		s_{9,5}&        1.000000\\           
-		s_{9,6}&        1.000000\\          
-		s_{4,7}&        1.000000\\        
-		s_{4,8}&        1.000000\\         
-		s_{4,9}&        1.000000\\            
-	 s_{2,10}&        1.000000\\           
-	 s_{2,11}&        1.000000\\            
-	 s_{2,12}&        1.000000\\            
-	 s_{2,13}&        1.000000\\         
-	 s_{1,14}&        1.000000\\            
-	 s_{1,15}&        1.000000\\           
-	 s_{5,16}&        1.000000\\            
-	 s_{5,17}&        1.000000\\         
-	 s_{5,18}&        1.000000\\          
-	 s_{6,19}&        1.000000\\            
-	 s_{6,20}&        1.000000\\            
-	 s_{8,21}&        1.000000\\           
-	 s_{8,22}&        1.000000\\            
-	 s_{8,23}&        1.000000\\            
-	 s_{8,24}&        1.000000\\           
-	 s_{8,25}&        1.000000\\            
-	 s_{8,26}&        1.000000\\           
-	 s_{8,27}&        1.000000\\            
-	 s_{7,28}&        1.000000\\         
-	 s_{7,29}&        1.000000\\         
-	 s_{7,30}&        1.000000\\          
-	 s_{7,31}&        1.000000\\        
-	 s_{7,32}&        1.000000\\       
-	 s_{3,33}&        1.000000 
+		s_{9,1}&   \     1.000000\\        
+		s_{9,2}&   \     1.000000\\          
+		s_{9,3}&   \     1.000000\\            
+		s_{9,4}&   \     1.000000\\           
+		s_{9,5}&   \     1.000000\\           
+		s_{9,6}&   \     1.000000\\          
+		s_{4,7}&   \     1.000000\\        
+		s_{4,8}&   \     1.000000\\         
+		s_{4,9}&   \     1.000000\\            
+	 s_{2,10}&     \   1.000000\\           
+	 s_{2,11}&     \   1.000000\\            
+	 s_{2,12}&     \   1.000000\\            
+	 s_{2,13}&     \   1.000000\\         
+	 s_{1,14}&     \   1.000000\\            
+	 s_{1,15}&     \   1.000000\\           
+	 s_{5,16}&     \   1.000000\\            
+	 s_{5,17}&     \   1.000000\\         
+	 s_{5,18}&     \   1.000000\\          
+	 s_{6,19}&     \   1.000000\\            
+	 s_{6,20}&     \   1.000000\\            
+	 s_{8,21}&     \   1.000000\\           
+	 s_{8,22}&     \   1.000000\\            
+	 s_{8,23}&     \   1.000000\\            
+	 s_{8,24}&     \   1.000000\\           
+	 s_{8,25}&     \   1.000000\\            
+	 s_{8,26}&     \   1.000000\\           
+	 s_{8,27}&     \   1.000000\\            
+	 s_{7,28}&     \   1.000000\\         
+	 s_{7,29}&     \   1.000000\\         
+	 s_{7,30}&     \   1.000000\\          
+	 s_{7,31}&     \   1.000000\\        
+	 s_{7,32}&     \   1.000000\\       
+	 s_{3,33}&     \   1.000000 
 	\end{align*}
 \caption{Resultados modelo extendido}
 \label{table2}
@@ -421,23 +421,23 @@ Se muestran las mismas variables que el caso estándar, pero del modelo extendid
 
 \section{Análisis de Resultados}
 \subsection{Modelo estándar}
-Podemos observar que el tiempo necesario para resolver el problema usando el modelo estándar es muy grande, pero el resultado es muy bueno pensando que el problema sin optimizar tiene un tiempo de espera de 49 [u. de tiempo] y el optimizado es de 17, casi un 65\% de mejora en los tiempos de espera. Y la solución que optimiza nuestro problema es realizar el ensayo con las piezas en el siguiente orden:
+Se puede observar que el tiempo necesario para resolver el problema usando el modelo estándar es muy grande. Por otro lado, el resultado es bueno teniendo en cuenta que el problema sin optimizar (tal y como venían los ensayos) tiene un tiempo de espera de $49$ [u. de tiempo] y el resultado optimizado es de $17$ [u. de tiempo], casi un 65\% de mejora en los tiempos de espera. La solución que optimiza el problema (tiempo de espera total de los músicos) es poner los ensayos en el orden que se muestra a continuación
 
 $$ 9\rightarrow4\rightarrow6\rightarrow5\rightarrow1\rightarrow7\rightarrow8\rightarrow3 $$
 
 
 
 \subsection{Modelo extendido}
-Se observa que el tiempo de ejecución es muy grande, más que nada por la cantidad de variables que tiene nuestro modelo. El resultado obtenido es el óptimo, pero la mejora no es tanto (por lo menos en este caso), ya que el valor inicial es 34 [u. de costo] y 2 más que el valor óptimo. 
+Se observa que el tiempo de ejecución es muy grande, esto debido a la gran cantidad de variables que considera el modelo y que al agregar los costos, existe una mayor cantidad de combinaciones por probar. El resultado obtenido para la función objetivo es el óptimo, pero la mejora (respecto a tal y como venían los ensayos) no es tanto , ya que el valor inicial (sin realizar ningún orden) es $34$ [u. de costo] y el óptimo es $32$ [u. de costo].  
 
-El orden que le dio nuestro modelo a las piezas musicales es el siguiente:
+El orden en que se deben realizar los ensayos para minimizar los costos por tiempos de espera, es el siguiente
 
 $$ 9\rightarrow4\rightarrow2\rightarrow1\rightarrow5\rightarrow6\rightarrow8\rightarrow3 $$
 
 \subsection{Análisis General}
-	El tiempo de ejecución de los dos modelos se debe a la gran cantidad de variables utilizamos, y al método que utiliza el software \emph{LINGO} para resolver el problema, que en este caso es \emph{Branch and Bound} que depende mucho de en que orden se va a recorriendo el árbol de resultados. 
+	El tiempo de ejecución de los dos modelos se debe a la gran cantidad de variables que se usaron en el modelo, y al método que utiliza el software \emph{LINGO} para resolver el problema, que en este caso es \emph{Branch and Bound}, el cual depende mucho del orden en que se va a recorriendo el árbol de resultados. 
 	
-	En relación al orden de las piezas, se observan diferencias en cómo nuestros distintos modelos organizan las piezas, pero esto se debe a que cada modelo busca cosas distintas, uno minimiza el tiempo de espera y el segundo tiene que minimizar el tiempo de espera pero teniendo en cuenta el costo asociado a esperar ese tiempo, para minimizar este costo.
+	En relación al orden de las piezas, se observan diferencias en cómo los distintos modelos organizan las piezas, pero esto se debe a que cada modelo apunta a cosas distintas; uno minimiza el tiempo de espera total y el segundo debe minimizar el costo a pagar por los músicos cuando estos están esperando.
 
 
 \section{Conclusiones y trabajo futuro}
