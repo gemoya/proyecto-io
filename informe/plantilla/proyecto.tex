@@ -283,7 +283,6 @@ por lo que dependiendo de los costos $c_k$ que se definen en los músicos, se es
 
 \section{Experimentación}
 \subsection{Entorno (Hardware y Software)}
-Se debe detallar el \textit{software} y \textit{hardware} utilizado. Además, configuraciones y parámetros utilizados tanto en el modelo como en el \textit{Solver} utilizado (En este caso el solver a utilizar será LINGO). \textbf{(5 puntos)}
 Para de la implementación del modelo se utilizaron los siguientes elementos de hardware y software:
 \begin{itemize}
 	\item \textbf{Hardware:} 
@@ -299,11 +298,27 @@ Para de la implementación del modelo se utilizaron los siguientes elementos de 
 			\item Solver: LINGO 10.0
 		\end{itemize}
 \end{itemize}
+
 \subsection{Resultados modelo estándar} 
 Los resultados importantes para nosotros son el orden en que se deben ensayar las piezas, la función objetivo y el tiempo de ejecución del programa.
 
-Solo mostraremos los valores que no son nulos de los que decidimos que son importantes para analizar.
+Utilizamos como input inicial la siguiente tabla donde se muestra que músico toca que pieza musical:
+
 \begin{center}
+	\begin{tabular}{c|ccccccccc}
+	Músico \textbackslash Pieza & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\ \hline
+	1 & 1 & 1  & 0 & 1 & 0 & 1 & 1 & 0 & 1\\
+	2 & 1 & 1  & 0 & 1 & 1 & 1 & 0 & 1 & 0\\
+	3 & 1 & 1  & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+	4 & 1 & 0  & 0 & 0 & 1 & 1 & 0 & 0 & 1\\
+	5 & 0 & 0  & 1 & 0 & 1 & 1 & 1 & 1 & 0\\ \hline 
+	Duración & 2 & 4 & 1 & 3 & 3 & 2 & 5 & 7 & 6
+\end{tabular}
+
+\end{center}
+
+Solo mostraremos los valores que no son nulos de los que decidimos que son importantes para analizar. (Cuadro \ref{table1})
+\begin{table}
 	\begin{align*}
 		s_{9,1}&        1.000000\\        
 		s_{9,2}&        1.000000\\          
@@ -339,13 +354,70 @@ Solo mostraremos los valores que no son nulos de los que decidimos que son impor
 	 s_{8,32}&        1.000000\\       
 	 s_{3,33}&        1.000000 
 	\end{align*}
+\caption{Resultados modelo estándar}
+\label{table1}
+\end{table}
+
+El resultado optimizado de nuestra función objetivo fue de \textbf{17}, y el tiempo de ejecución del programa fue de \textbf{1hr : 39min : 33seg}.
+
+\newpage
+\subsection{Resultados modelo extendido}
+Para el caso del modelo extendido utilizamos la misma tabla del caso estándar pero ahora le asignamos costos a cada músico
+\begin{center}
+	\begin{tabular}{cc}
+	Músico & Costo \\ \hline
+	1 & 1\\
+	2 & 5\\
+	3 & 2\\
+	4 & 2\\
+	5 & 3
+\end{tabular}
 \end{center}
 
-El resultado optimizado de nuestra función objetivo fue de \textbf{17}, y el tiempo de ejecución del programa fue de \textbf{1hr:39min:33seg}.
 
+El modelo extendido se demoró un poco más que el modelo normal, con un tiempo de ejecución de \textbf{3 hr : 10 min : 02 seg}, un costo mínimo de \textbf{32}. 
 
-\subsection{Resultados modelo extendido}
-Reportar resultados obtenidos, además de los tiempos de ejecución. \textbf{(5 puntos)}
+Se muestran las mismas variables que el caso estándar, pero del modelo extendido. (Cuadro \ref{table2})
+
+\begin{table}%
+	\begin{align*}
+		s_{9,1}&        1.000000\\        
+		s_{9,2}&        1.000000\\          
+		s_{9,3}&        1.000000\\            
+		s_{9,4}&        1.000000\\           
+		s_{9,5}&        1.000000\\           
+		s_{9,6}&        1.000000\\          
+		s_{4,7}&        1.000000\\        
+		s_{4,8}&        1.000000\\         
+		s_{4,9}&        1.000000\\            
+	 s_{2,10}&        1.000000\\           
+	 s_{2,11}&        1.000000\\            
+	 s_{2,12}&        1.000000\\            
+	 s_{2,13}&        1.000000\\         
+	 s_{1,14}&        1.000000\\            
+	 s_{1,15}&        1.000000\\           
+	 s_{5,16}&        1.000000\\            
+	 s_{5,17}&        1.000000\\         
+	 s_{5,18}&        1.000000\\          
+	 s_{6,19}&        1.000000\\            
+	 s_{6,20}&        1.000000\\            
+	 s_{8,21}&        1.000000\\           
+	 s_{8,22}&        1.000000\\            
+	 s_{8,23}&        1.000000\\            
+	 s_{8,24}&        1.000000\\           
+	 s_{8,25}&        1.000000\\            
+	 s_{8,26}&        1.000000\\           
+	 s_{8,27}&        1.000000\\            
+	 s_{7,28}&        1.000000\\         
+	 s_{7,29}&        1.000000\\         
+	 s_{7,30}&        1.000000\\          
+	 s_{7,31}&        1.000000\\        
+	 s_{7,32}&        1.000000\\       
+	 s_{3,33}&        1.000000 
+	\end{align*}
+\caption{Resultados modelo extendido}
+\label{table2}
+\end{table}
 
 \section{Análisis de Resultados}
 \subsection{Modelo estándar}
@@ -356,7 +428,16 @@ $$ 9\rightarrow4\rightarrow6\rightarrow5\rightarrow1\rightarrow7\rightarrow8\rig
 
 
 \subsection{Modelo extendido}
+Se observa que el tiempo de ejecución es muy grande, más que nada por la cantidad de variables que tiene nuestro modelo. El resultado obtenido es el óptimo, pero la mejora no es tanto (por lo menos en este caso), ya que el valor inicial es 34 [u. de costo] y 2 más que el valor óptimo. 
 
+El orden que le dio nuestro modelo a las piezas musicales es el siguiente:
+
+$$ 9\rightarrow4\rightarrow2\rightarrow1\rightarrow5\rightarrow6\rightarrow8\rightarrow3 $$
+
+\subsection{Análisis General}
+	El tiempo de ejecución de los dos modelos se debe a la gran cantidad de variables utilizamos, y al método que utiliza el software \emph{LINGO} para resolver el problema, que en este caso es \emph{Branch and Bound} que depende mucho de en que orden se va a recorriendo el árbol de resultados. 
+	
+	En relación al orden de las piezas, se observan diferencias en cómo nuestros distintos modelos organizan las piezas, pero esto se debe a que cada modelo busca cosas distintas, uno minimiza el tiempo de espera y el segundo tiene que minimizar el tiempo de espera pero teniendo en cuenta el costo asociado a esperar ese tiempo, para minimizar este costo.
 
 
 \section{Conclusiones y trabajo futuro}
