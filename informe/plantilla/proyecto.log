@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.30)  4 DEC 2014 03:52
-=======
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.26)  4 DEC 2014 03:30
->>>>>>> 401b081bdf8a1033715ede5c308e58cf56eea850
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.30)  4 DEC 2014 03:58
 entering extended mode
 **proyecto.tex
 (C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.tex
@@ -524,26 +520,19 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 291.
- [3]
-<<<<<<< HEAD
-(C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.bbl) [4]
+ [3] [4]
+(C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.bbl) [5
+
+]
 (C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.aux) ) 
 Here is how much of TeX's memory you used:
  3298 strings out of 493921
  47548 string characters out of 3144885
-=======
-(C:\Users\Camilo\Documents\GitHub\proyecto-io\informe\plantilla\proyecto.bbl) [4]
-(C:\Users\Camilo\Documents\GitHub\proyecto-io\informe\plantilla\proyecto.aux) ) 
-Here is how much of TeX's memory you used:
- 3298 strings out of 493921
- 47614 string characters out of 3144873
->>>>>>> 401b081bdf8a1033715ede5c308e58cf56eea850
  124063 words of memory out of 3000000
  6535 multiletter control sequences out of 15000+200000
  38085 words of font info for 73 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  42i,17n,27p,981b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
-<<<<<<< HEAD
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dv
 ips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
@@ -552,20 +541,9 @@ cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
 es/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on proyecto.pdf (4 pages, 143929 bytes).
-=======
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/
-enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/u
-rw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on proyecto.pdf (4 pages, 145859 bytes).
->>>>>>> 401b081bdf8a1033715ede5c308e58cf56eea850
+Output written on proyecto.pdf (5 pages, 147191 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
