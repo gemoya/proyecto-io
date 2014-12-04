@@ -51,7 +51,7 @@ Referencias: & \underline{\hspace{0.5cm}}/5 \\
 \end{tabular}
 
 \begin{abstract}
-\boldmath Se resolverá ``The Rehearsal Problem'', problema que trata sobre la . \textbf{(5 ptos.)}
+\boldmath Se resolverá ``The Rehearsal Problem'', problema que trata sobre la asignación de músicos de una orquesta, a distinta piezas de ensayos, cada pieza tiene una duración distinta, donde los músicos que no tocan deben esperar que los otros músicos finalicen de tocar la pieza. Se busca minimizar el tiempo de espera entre cada pieza. \textbf{(5 ptos.)}
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -78,9 +78,7 @@ García de la Banda, Stucky y Chu (2011)\cite{ref3}, aplicaron programación din
 
 Smith (2003)\cite{ref6}, tomó el problema de la programación de producción de cine y lo adaptó al problema de programación de la orquesta (problema que estamos estudiando). Éste problema fue resuelto como un problema de satisfacción de restricciones. Gregory, Miller y Prosser (2004)\cite{ref7}, utilizaron técnicas de planificación y verificación de modelos para resolver el problema. Se compararon las dos técnicas, con la propuesta por Smith (2003)\cite{ref6}, el resultado mostró que la técnica de planificación superó la técnica de satisfacción de restricciones y la verificación de modelos en términos de tiempo de cálculo.
 
-Hasta entonces, los ``Rehearsal Problem" anteriores se basaban en el caso donde las piezas musicales se encuentran secuenciadas desde la primera hasta la última. Sakulson and Tharmmaphornphilas (2011)[], considerando piezas musicales de igual duración de ensayo, a través de una casilla. Ellos optaron por disponer de varios días para los ensayos, y en base a esto poder minimizar el número de días en que los músicos deben estar presentes. Además con la intención de minimizar el tiempo de espera de cada músico en cada día en particular.
-
-Hasta entonces, los ``Rehearsal Problem" anteriores se basaban en el caso donde las piezas musicales se encuentran secuenciadas desde la primera hasta la última. Sakulson and Tharmmaphornphilas (2011)\cite{ref8}, considerando piezas musicales de igual duración de ensayo, a través de una casilla. Ellos optaron por disponer de varios días para los ensayos, y en base a esto poder minimizar el número de días en que los músicos deben estar presentes. Además con la intención de minimizar el tiempo de espera de cada músico en cada día en particular.
+Hasta entonces, los `Rehearsal Problem' anteriores se basaban en el caso donde las piezas musicales se encuentran secuenciadas desde la primera hasta la última. Sakulson and Tharmmaphornphilas (2011)\cite{ref8}, considerando piezas musicales de igual duración de ensayo, a través de una casilla. Ellos optaron por disponer de varios días para los ensayos, y en base a esto poder minimizar el número de días en que los músicos deben estar presentes. Además con la intención de minimizar el tiempo de espera de cada músico en cada día en particular.
 
 
 Para nuestro caso, distinto del anterior, se considerarán piezas musicales de distinta duración, con limitación tanto en los slots de ensayo como en los días de ensayo. También se asume que la paga de los músicos es sólo para el día en que asisten a ensayar. Distinto del modelo presentado por  Cheng et al. (1993)\cite{ref1}, quien considera pagos de músicos distintos, ahora se presentará el problema con montos de pago iguales para los músicos, es decir que la paga por día es igual para cada músico. Lo anterior permite reducir el problema a minimizar los días que deben presentarse los músicos a ensaya, buscando además la satisfacción de los músicos, reduciendo el tiempo de espera en el día de cada uno, para tocar la pieza que deben.
