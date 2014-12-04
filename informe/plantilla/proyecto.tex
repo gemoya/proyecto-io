@@ -109,15 +109,57 @@ Los parámetros del problema son los siguientes:
 de forma natural se definen las variables de decisión del problema:	
 \begin{flalign*}
 & \text{\textbf{Variables:}} \\
-& s_{ij} = 1 \text{ ssi  ensayo } i \text{ va en el slot }j \text{, } 0 \text{ eoc.} \\
-& plays_{kj} = 1 \text{ ssi  músico } k \text{ debe tocar en slot }j \text{, } 0 \text{ eoc.} \\
-& start_{ij} = 1 \text{ ssi  ensayo } i \text{ es ensayado en o antes de slot }j \text{, } 0 \text{ eoc.} \\
-& end_{ij} = 1 \text{ ssi  ensayo } i \text{ es ensayado en o después de slot }j \text{, } 0 \text{ eoc.} \\
-& r_{kj} = 1 \text{ ssi  músico } k \text{ está presente en slot }j \text{, } 0 \text{ eoc.} \\
-& a_{kj} = 1 \text{ ssi  músico } k \text{ arriva en o antes de slot } j \text{, } 0 \text{ eoc.} \\
-& l_{kj} = 1 \text{ ssi  músico } k \text{ se retira en o después de slot } j \text{, } 0 \text{ eoc.} \\
-& w_{kj} = 1 \text{ ssi  músico } k \text{ debe esperar en slot } j \text{, } 0 \text{ eoc.} \\
+& s_{ij} = \ \ \ \ \ \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  ensayo } i \text{ va en el slot }j\\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& plays_{kj} = \left\{
+\begin{array}{c l}
+1 \text{ ssi  músico } k \text{ debe tocar en slot }j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& start_{ij} = \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  ensayo } i \text{ es ensayado en o antes de slot }j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& end_{ij}  = \ \ \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  ensayo } i \text{ es ensayado en o después de slot }j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& r_{kj}  = \ \ \ \ \ \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  músico } k \text{ está presente en slot }j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& a_{kj}  = \ \ \ \ \ \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  músico } k \text{ arriva en o antes de slot } j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& l_{kj}  = \ \ \ \ \ \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  músico } k \text{ se retira en o después de slot } j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& w_{kj}  = \ \ \ \ \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  músico } k \text{ debe esperar en slot } j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
 \end{flalign*}
+
+
 
 como lo que se quiere es minimizar el tiempo de espera total la función objetivo \eqref{eq:FO} es 
 
@@ -224,6 +266,7 @@ la restricción \eqref{eq:res13} dice que el ensayo $i$ termina en el slot $j$ (
 \end{equation}	
 
 \end{itemize}  
+
 
 
 \subsection{Extensión}
