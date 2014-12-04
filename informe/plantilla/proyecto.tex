@@ -268,7 +268,16 @@ la restricción \eqref{eq:res13} dice que el ensayo $i$ termina en el slot $j$ (
 
 
 \subsection{Extensión}
-Planteamiento de un modelo mejorado y/o extendido. Explicar el sentido que tiene la extensión y su explicación formal correspondiente. Justificar el nuevo modelo con respecto al estándar. \textbf{(15 puntos)}
+Para la extensión del ``The Rehearsal Problem", observamos que sólo se toma en cuenta el tiempo de espera de los músicos, en cambio en la versión de ``Talent Scheduling Problem" además se tiene que cada actor, en nuestro caso seria cada músico, tiene un costo asignado, ya que a cada músico se le paga una cantidad distinta de dinero por hora, generalmente mientras más experiencia más dinero debería ganar pero si tenemos a las personas que más se les paga esperando el gasto va a ser innecesario, por lo que tenemos que buscar optimizar el gasto de tener músicos experimentados (o que sean más costosos) esperando por mucho tiempo.
+
+Si buscamos extender nuestro problema agregando un costo asociado al músico es necesario agregar un nuevo parámetro a nuestro modelo, que es el costo por hora de tener a un músico en la sala de ensayo pero sin tocar.
+	$$c_k : \text{Costo de tener al músico k esperando en el ensayo} $$
+	
+Y nuestra nueva función objetivo buscará minimizar el costo de tener a los músicos esperando, no simplemente su tiempo de espera, por lo que esperamos un resultado diferente al del modelo estándar.
+
+\begin{equation} \label{eq:FO2}
+\text{Min } z = \sum_{k=1}^{p}\sum_{j=1}^n c_{k} \cdot w_{kj} 
+\end{equation}
 
 \section{Experimentación}
 \subsection{Entorno (Hardware y Software)}
