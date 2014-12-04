@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.30)  4 DEC 2014 02:58
-=======
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.26)  4 DEC 2014 02:49
->>>>>>> e773e1cf0eaaefe63d1c4cede20a451adc9425ad
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.30)  4 DEC 2014 03:07
 entering extended mode
 **proyecto.tex
-(C:\Users\Camilo\Documents\GitHub\proyecto-io\informe\plantilla\proyecto.tex
+(C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
 , bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
@@ -14,7 +10,7 @@ ian, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, icelandic, 
 -x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, romanian, russian, sanskrit, serbian, slovak, sloven
 ian, spanish, swedish, swissgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usenglishmax, w
 elsh, loaded.
-(C:\Users\Camilo\Documents\GitHub\proyecto-io\informe\plantilla\IEEEtran.cls
+(C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\IEEEtran.cls
 Document Class: IEEEtran 2012/12/27 V1.8 by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -483,7 +479,7 @@ Package epstopdf Warning: Drivers other than `pdftex.def' are not supported.
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(C:\Users\Camilo\Documents\GitHub\proyecto-io\informe\plantilla\proyecto.aux)
+(C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
@@ -513,19 +509,13 @@ Overfull \hbox (18.93428pt too wide) in paragraph at lines 158--158
 [] 
  []
 
-<<<<<<< HEAD
 
 Underfull \vbox (badness 1424) has occurred while \output is active []
 
  [2]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 280.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 291.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
-=======
-[2]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 291.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
->>>>>>> e773e1cf0eaaefe63d1c4cede20a451adc9425ad
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
@@ -549,22 +539,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 525--526
-
- []
-
-(C:\Users\Camilo\Documents\GitHub\proyecto-io\informe\plantilla\proyecto.bbl [6]) [7
-
-]
-(C:\Users\Camilo\Documents\GitHub\proyecto-io\informe\plantilla\proyecto.aux) ) 
+(C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.bbl) [6]
+(C:\Users\Hp\Desktop\GitHub\proyecto-io\informe\plantilla\proyecto.aux) ) 
 Here is how much of TeX's memory you used:
- 3299 strings out of 493921
- 47621 string characters out of 3144873
+ 3298 strings out of 493921
+ 47548 string characters out of 3144885
  142063 words of memory out of 3000000
  6535 multiletter control sequences out of 15000+200000
- 39181 words of font info for 74 fonts, out of 3000000 for 9000
+ 38085 words of font info for 73 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
-<<<<<<< HEAD
  42i,17n,27p,981b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dv
 ips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)
@@ -574,21 +557,9 @@ cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
 es/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on proyecto.pdf (4 pages, 141773 bytes).
-=======
- 42i,17n,27p,981b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/
-enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/u
-rw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on proyecto.pdf (7 pages, 147601 bytes).
->>>>>>> e773e1cf0eaaefe63d1c4cede20a451adc9425ad
+Output written on proyecto.pdf (6 pages, 144528 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
