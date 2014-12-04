@@ -78,11 +78,10 @@ García de la Banda, Stucky y Chu (2011)\cite{ref3}, aplicaron programación din
 
 Smith (2003)\cite{ref6}, tomó el problema de la programación de producción de cine y lo adaptó al problema de programación de la orquesta (problema que estamos estudiando). Éste problema fue resuelto como un problema de satisfacción de restricciones. Gregory, Miller y Prosser (2004)\cite{ref7}, utilizaron técnicas de planificación y verificación de modelos para resolver el problema. Se compararon las dos técnicas, con la propuesta por Smith (2003)\cite{ref6}, el resultado mostró que la técnica de planificación superó la técnica de satisfacción de restricciones y la verificación de modelos en términos de tiempo de cálculo.
 
-<<<<<<< HEAD
 Hasta entonces, los ``Rehearsal Problem" anteriores se basaban en el caso donde las piezas musicales se encuentran secuenciadas desde la primera hasta la última. Sakulson and Tharmmaphornphilas (2011)[], considerando piezas musicales de igual duración de ensayo, a través de una casilla. Ellos optaron por disponer de varios días para los ensayos, y en base a esto poder minimizar el número de días en que los músicos deben estar presentes. Además con la intención de minimizar el tiempo de espera de cada músico en cada día en particular.
-=======
-Hasta entonces, los 'Rehearsal Problem' anteriores se basaban en el caso donde las piezas musicales se encuentran secuenciadas desde la primera hasta la última. Sakulson and Tharmmaphornphilas (2011)\cite{ref8}, considerando piezas musicales de igual duración de ensayo, a través de una casilla. Ellos optaron por disponer de varios días para los ensayos, y en base a esto poder minimizar el número de días en que los músicos deben estar presentes. Además con la intención de minimizar el tiempo de espera de cada músico en cada día en particular.
->>>>>>> 176fa002bd1e3a4d30dac5ff4b9c0433933d52f1
+
+Hasta entonces, los ``Rehearsal Problem" anteriores se basaban en el caso donde las piezas musicales se encuentran secuenciadas desde la primera hasta la última. Sakulson and Tharmmaphornphilas (2011)\cite{ref8}, considerando piezas musicales de igual duración de ensayo, a través de una casilla. Ellos optaron por disponer de varios días para los ensayos, y en base a esto poder minimizar el número de días en que los músicos deben estar presentes. Además con la intención de minimizar el tiempo de espera de cada músico en cada día en particular.
+
 
 Para nuestro caso, distinto del anterior, se considerarán piezas musicales de distinta duración, con limitación tanto en los slots de ensayo como en los días de ensayo. También se asume que la paga de los músicos es sólo para el día en que asisten a ensayar. Distinto del modelo presentado por  Cheng et al. (1993)\cite{ref1}, quien considera pagos de músicos distintos, ahora se presentará el problema con montos de pago iguales para los músicos, es decir que la paga por día es igual para cada músico. Lo anterior permite reducir el problema a minimizar los días que deben presentarse los músicos a ensaya, buscando además la satisfacción de los músicos, reduciendo el tiempo de espera en el día de cada uno, para tocar la pieza que deben.
 
@@ -198,29 +197,30 @@ Muy similar al caso anterior, \eqref{eq:res4} el músico se va al final del slot
 	\sum_{j=1}^n s_{ij} = \delta_{i} \ \ \forall i \in \mathcal{I}
 \end{equation}
 
+Las restricciones \eqref{eq:res10}-\eqref{eq:res14} fuerzan a que la asignación de un ensayo $i$ sea en $\delta_i$ slots consecutivos, pues un ensayo individual no debe divirse en partes. La restricción \eqref{eq:res10} asegura que el ensayo $i$ se realice en el slot $j$, si dicho ensayo comienza en el slot $j$ (o antes) y termina al final del slot $j$ (o después)	 
 
 \begin{equation}\label{eq:res10} 
 	s_{ij} \geq start_{ij} + end_{ij} -1 \ \ \forall i \in \mathcal{I}, \ \forall j \in \mathcal{J}
 \end{equation}
 
+la restricción \eqref{eq:res11} indica que el ensayo $i$ ha comenzado en el slot $j+1$, si ha comienza en $j$ o antes y \eqref{eq:res12} sirve como base de la recursión anterior, estableciendo que si el ensayo $i$ va en en el slot $j$, entonces dicho ensayo ya ha comenzado en dicho slot (o antes)
 
 \begin{equation}\label{eq:res11} 
-	start_{ij} \leq start_{i,j+1} \ \ \forall i \in \mathcal{I}, \ \forall j \in \{1,\ldots,n\}
+	start_{ij} \leq start_{i,j+1} \ \ \forall i \in \mathcal{I}, \ \forall j \in \{1,\ldots,n-1\}
 \end{equation}  
 
-
 \begin{equation}\label{eq:res12} 
-	start_{ij} \leq s_{ij} \ \ \forall i \in \mathcal{I}, \ \forall j \in \mathcal{J}
+	start_{ij} \geq s_{ij} \ \ \forall i \in \mathcal{I}, \ \forall j \in \mathcal{J}
 \end{equation}
 
+la restricción \eqref{eq:res13} dice que el ensayo $i$ termina en el slot $j$ (o después), si termina en el slot $j+1$ (o después) y \eqref{eq:res14} sirve de base a la recursión, estableciendo que si el ensayo $i$ va en el slot $j$, entonces dicho ensayo termina al final del slot $j$ (o después)  
 
 \begin{equation}\label{eq:res13} 
-	end_{ij} \geq end_{i,j+1} \ \ \forall i \in \mathcal{I}, \ \forall j \in \{1,\ldots,n\}
+	end_{ij} \geq end_{i,j+1} \ \ \forall i \in \mathcal{I}, \ \forall j \in \{1,\ldots,n-1\}
 \end{equation} 
 
-
 \begin{equation}\label{eq:res14} 
-	end_{ij} \leq s_{ij} \ \ \forall i \in \mathcal{I}, \ \forall j \in \mathcal{J}
+	end_{ij} \geq s_{ij} \ \ \forall i \in \mathcal{I}, \ \forall j \in \mathcal{J}
 \end{equation}	
 
 \end{itemize}  
