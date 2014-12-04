@@ -1,4 +1,5 @@
 \documentclass[journal, 10pt]{IEEEtran}
+
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsfonts}
@@ -16,6 +17,7 @@
 \else
 \@IEEEfigurecaptionsepspace
 \setbox\@tempboxa\hbox{\normalfont\footnotesize {#1.}~~ #2}%
+
 \ifdim \wd\@tempboxa >\hsize%
 \setbox\@tempboxa\hbox{\normalfont\footnotesize {#1.}~~ }%
 \parbox[t]{\hsize}{\normalfont\footnotesize \noindent\unhbox\@tempboxa#2}%
@@ -28,7 +30,7 @@
 \title{\textit{Solving The Rehearsal Scheduling Problem}}
 \author{Camilo Valenzuela, Martín Villanueva, German Ortiz, Gonzalo Moya \\ Universidad Técnica Federico Santa María \\
 Avenida España 1680, Valparaíso, Chile \\
-cvalenzu@alumnos.inf.utfsm.cl mavillan@alumnos.inf.utfsm.cl gortiz@alumnos.inf.utfsm.cl gemoya@inf.utfsm.cl}
+cvalenzu@alumnos.inf.utfsm.cl mavillan@alumnos.inf.utfsm.cl gortiz@alumnos.inf.utfsm.cl gemoya@alumnos.inf.utfsm.cl}
 \maketitle
 
 \section*{Evaluación}
@@ -49,16 +51,16 @@ Referencias: & \underline{\hspace{0.5cm}}/5 \\
 \end{tabular}
 
 \begin{abstract}
-\boldmath Se resolverá ``The Rehearsal Problem'', problema que trata sobre la . \textbf{(5 ptos.)}
+\boldmath Se resolverá ``The Rehearsal Problem'', problema que trata sobre la asignación de músicos de una orquesta, a distinta piezas de ensayos y cada pieza tiene una duración distinta. Se busca, utilizando programación lineal entera, minimizar el tiempo de espera para cada músico entre la primera y la última pieza que debe tocar.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Palabras claves del proyecto, se puede considerar como si se usara un buscador, debería ser encontrado al usar esas palabras. Deber ser específico respecto al problema y maneras de resolver. \textbf{(5 ptos.)} Rehearsal scheduling problem ?
+	Rehearsal scheduling problem, programación lineal entera, optimización.
 \end{IEEEkeywords}
 
 \section{Introducción}
 
-\textit{``The Rehearsal Problem"} trata la planificación de los ensayos para un concierto, el cual consiste de nueve piezas de música de diferentes duraciones, donde cada una involucra una combinación distinta de músicos. Estos músicos pueden llegar pueden llegar a los ensayos inmediatamente antes de que les toque ensayar, e irse inmediatamente después de participar en su última pieza. El fin del problema es diseñar un orden específico de las piezas musicales con el fin de minimizar el tiempo de espera de los músicos para tocar en su ensayo, en otras palabras el tiempo en el cual los ensayistas estan presentes pero no estan tocando. 
+\textit{``The Rehearsal Problem"} trata la planificación de los ensayos para un concierto, el cual consiste de nueve piezas de música de diferentes duraciones, donde cada una involucra una combinación distinta de músicos. Estos músicos pueden llegar pueden llegar a los ensayos inmediatamente antes de que les toque ensayar, e irse inmediatamente después de participar en su última pieza. El fin del problema es diseñar un orden específico de las piezas musicales con el fin de minimizar el tiempo de espera de los músicos para tocar en su ensayo, en otras palabras el tiempo en el cual los ensayistas están presentes pero no están tocando. 
 
 \section{Estado del arte}
 
@@ -72,11 +74,12 @@ En el año 1993, Cheng, Diamond y Ling\cite{ref1} plantearon un problema parecid
 
 El primer enfoque que se conoce para resolver éste problema, era un algoritmo de Branch and Bound, que es NP-duro, entonces, para reducir el tiempo de cálculo de Branch and Bound, (Cheng et al., 1993) se desarrolló un método heurístico\cite{ref1}. Nordström y Tufekci (1994)\cite{ref2}, propusieron un algoritmo que combina una heurística llamada `pairwise interchange' con un simple algoritmo de genética, para resolver el problema propuesto por Cheng (1993)\cite{ref1}, éste algoritmo superó al propuesto por Cheng et al. (1993)\cite{ref1}, en términos de calidad de las soluciones y en el tiempo computacional.
 
-García de la Banda, Stucky y Chu (2011)\cite{ref3}, aplicaron programación dinámica al problema de producción de cine. Kochetov (2011)\cite{ref4} desarrolló tres nuevos algoritmos heurísticos, estos son, un `annealing algorithm', `un stochastic tabu search algorithm'y un algoritmo de búsqueda local genética. Estas heurísticas propuestas, pudieron encontrar la solución a los pocos minutos. Bomsdorf y Derigs (2008)\cite{ref5}, estudiaron un problema similar al del rodaje de la película, ellos tomaron en cuenta otros factores un poco más realistas, como tiempo de trabajo, escena anteriormente grabada, disponibilidad de recursos, disminuir el tiempo de finalización (`makespan') y minimizar los costos de los recursos. Se aplicó una técnica de búsqueda codiciosa indirecta (`greedy indirect search technique') para resolver el problema. Éste método, proporcionó horarios más rápidos y mejor que el método de programación manual.
+García de la Banda, Stucky y Chu (2011)\cite{ref3}, aplicaron programación dinámica al problema de producción de cine. Kochetov (2011)\cite{ref4} desarrolló tres nuevos algoritmos heurísticos, estos son, un `annealing algorithm', `un stochastic tabu search algorithm' y un algoritmo de búsqueda local genética. Estas heurísticas propuestas, pudieron encontrar la solución a los pocos minutos. Bomsdorf y Derigs (2008)\cite{ref5}, estudiaron un problema similar al del rodaje de la película, ellos tomaron en cuenta otros factores un poco más realistas, como tiempo de trabajo, escena anteriormente grabada, disponibilidad de recursos, disminuir el tiempo de finalización (`makespan') y minimizar los costos de los recursos. Se aplicó una técnica de búsqueda codiciosa indirecta (`greedy indirect search technique') para resolver el problema. Éste método, proporcionó horarios más rápidos y mejor que el método de programación manual.
 
 Smith (2003)\cite{ref6}, tomó el problema de la programación de producción de cine y lo adaptó al problema de programación de la orquesta (problema que estamos estudiando). Éste problema fue resuelto como un problema de satisfacción de restricciones. Gregory, Miller y Prosser (2004)\cite{ref7}, utilizaron técnicas de planificación y verificación de modelos para resolver el problema. Se compararon las dos técnicas, con la propuesta por Smith (2003)\cite{ref6}, el resultado mostró que la técnica de planificación superó la técnica de satisfacción de restricciones y la verificación de modelos en términos de tiempo de cálculo.
 
-Hasta entonces, los 'Rehearsal Problem' anteriores se basaban en el caso donde las piezas musicales se encuentran secuenciadas desde la primera hasta la última. Sakulson and Tharmmaphornphilas (2011)\cite{ref8}, considerando piezas musicales de igual duración de ensayo, a través de una casilla. Ellos optaron por disponer de varios días para los ensayos, y en base a esto poder minimizar el número de días en que los músicos deben estar presentes. Además con la intención de minimizar el tiempo de espera de cada músico en cada día en particular.
+Hasta entonces, los `Rehearsal Problem' anteriores se basaban en el caso donde las piezas musicales se encuentran secuenciadas desde la primera hasta la última. Sakulson and Tharmmaphornphilas (2011)\cite{ref8}, considerando piezas musicales de igual duración de ensayo, a través de una casilla. Ellos optaron por disponer de varios días para los ensayos, y en base a esto poder minimizar el número de días en que los músicos deben estar presentes. Además con la intención de minimizar el tiempo de espera de cada músico en cada día en particular.
+
 
 Para nuestro caso, distinto del anterior, se considerarán piezas musicales de distinta duración, con limitación tanto en los slots de ensayo como en los días de ensayo. También se asume que la paga de los músicos es sólo para el día en que asisten a ensayar. Distinto del modelo presentado por  Cheng et al. (1993)\cite{ref1}, quien considera pagos de músicos distintos, ahora se presentará el problema con montos de pago iguales para los músicos, es decir que la paga por día es igual para cada músico. Lo anterior permite reducir el problema a minimizar los días que deben presentarse los músicos a ensaya, buscando además la satisfacción de los músicos, reduciendo el tiempo de espera en el día de cada uno, para tocar la pieza que deben.
 
@@ -92,27 +95,69 @@ A continuación se presenta una solución general al \textit{Rehearsal Schedulin
 & k \in \{1,\ldots,p\} = \mathcal{K} \ \ \text{indices de músicos}
 \end{flalign*}
 
-en donde $n \geq m$, pues se considera un slot por cada unidad de tiempo, esto es, deben haber tantos slots como unidades de tiempo total tome el ensayo completo. Los parámetros del problema son los siguientes
+en donde $n \geq m$, pues se considera un slot por cada unidad de tiempo, esto es, deben haber tantos slots como unidades de tiempo total tome practicar todos los ensayos. De este modo un ensayo que tome $q$ unidades de tiempo, deberá ser asignado a una secuencia consecutiva de $q$ slots.  
 
+Los parámetros del problema son los siguientes:
 \begin{flalign*}
 & \text{\textbf{Parámetros:}} \\
 & piezas_{ki} = 1 \text{ ssi músico }k \text{ toca en el ensayo }i \text{, } 0 \text{ eoc.} \\
 & \delta_{i}  \text{ duración del ensayo } i \\
 \end{flalign*}
 
-de forma natural se definen las siguientes varaibles
-
+de forma natural se definen las variables de decisión del problema:	
 \begin{flalign*}
 & \text{\textbf{Variables:}} \\
-& s_{ij} = 1 \text{ ssi  ensayo } i \text{ va en el slot }j \text{, } 0 \text{ eoc.} \\
-& plays_{kj} = 1 \text{ ssi  músico } k \text{ debe tocar en slot }j \text{, } 0 \text{ eoc.} \\
-& start_{ij} = 1 \text{ ssi  ensayo } i \text{ es ensayado en o antes de slot }j \text{, } 0 \text{ eoc.} \\
-& end_{ij} = 1 \text{ ssi  ensayo } i \text{ es ensayado en o después de slot }j \text{, } 0 \text{ eoc.} \\
-& r_{kj} = 1 \text{ ssi  músico } k \text{ está presente en slot }j \text{, } 0 \text{ eoc.} \\
-& a_{kj} = 1 \text{ ssi  músico } k \text{ arriva en o antes de slot } j \text{, } 0 \text{ eoc.} \\
-& l_{kj} = 1 \text{ ssi  músico } k \text{ se retira en o después de slot } j \text{, } 0 \text{ eoc.} \\
-& w_{kj} = 1 \text{ ssi  músico } k \text{ debe esperar en slot } j \text{, } 0 \text{ eoc.} \\
+& s_{ij} = \ \ \ \ \ \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  ensayo } i \text{ va en el slot }j\\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& plays_{kj} = \left\{
+\begin{array}{c l}
+1 \text{ ssi  músico } k \text{ debe tocar en slot }j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& start_{ij} = \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  ensayo } i \text{ es ensayado en o antes de slot }j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& end_{ij}  = \ \ \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  ensayo } i \text{ es ensayado en o después de slot }j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& r_{kj}  = \ \ \ \ \ \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  músico } k \text{ está presente en slot }j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& a_{kj}  = \ \ \ \ \ \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  músico } k \text{ arriva en o antes de slot } j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& l_{kj}  = \ \ \ \ \ \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  músico } k \text{ se retira en o después de slot } j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
+& w_{kj}  = \ \ \ \ \ \left\{
+\begin{array}{c l}
+1 \text{ ssi  músico } k \text{ debe esperar en slot } j \\
+0 \text{ eoc.}
+\end{array}
+\right. \\
 \end{flalign*}
+
+
 
 como lo que se quiere es minimizar el tiempo de espera total la función objetivo \eqref{eq:FO} es 
 
@@ -138,7 +183,7 @@ básicamente $s_{ij}$ permite sabe si el ensayo $i$ va en el slot $j$, de ser as
 
 
 
-\item \textbf{Arrivo de músicos}. Para determinar si el músico $k$ llega (ha llegado) el slot $j$ se tienen las siguientes dos reestricciones
+\item \textbf{Arrivo de músicos}. Para determinar si el músico $k$ llega (ha llegado) el slot $j$ se tienen las siguientes dos restricciones
 
 \begin{equation}\label{eq:res2} 
 	a_{kj} \leq a_{k,j+1} \ \ \forall k \in \mathcal{K}, j \in \{1,\ldots,n-1\}
@@ -152,35 +197,74 @@ Primero, \eqref{eq:res2} indica recursivamente que el músico $k$ ya ha llegado 
 
 
 
-\item \textbf{Salida de músicos}. Para determinar si el músico $k$ se va al final (o después) del slot $j$ se tienen las siguientes dos reestricciones
+\item \textbf{Salida de músicos}. Para determinar si el músico $k$ se va al final (o después) del slot $j$ se tienen las siguientes dos restricciones
 
 \begin{equation}\label{eq:res4} 
 	l_{kj} \geq l_{k,j+1} \ \ \forall k \in \mathcal{K}, \ \forall j \in \{1,\ldots,n-1\}
 \end{equation}
 
 \begin{equation}\label{eq:res5} 
-	l_{kj} \geq p_{kj} \ \ \forall k \in \mathcal{K}, \forall j \in \mathcal{J}
+	l_{kj} \geq p_{kj} \ \ \forall k \in \mathcal{K},\ \forall j \in \mathcal{J}
 \end{equation}
 
-Muy similar al caso anterior, \eqref{eq:res4} el músico se va al final del slot $j$ (o después), 
+Muy similar al caso anterior, \eqref{eq:res4} el músico se va al final del slot $j$ (o después), si se va en el slot $j+1$ o alguno posterior. La restricción \eqref{eq:res5} dice que el músico se puede ir al final del slot $j$ (o después) si toca en dicho slot.     
+
+
 
 \item \textbf{Presencia de músicos}. Un músico está presente en el slot $j$, si llega en el slot $j$ (o antes) y se va al final (o después) del slot. Esto quede representado en \eqref{eq:res6}
 
 \begin{equation}\label{eq:res6} 
-	r_{kj} \geq a_{kj} + l_{kj} \ \ \forall k \in \mathcal{K}, \forall j \in \mathcal{J}
+	r_{kj} \geq a_{kj} + l_{kj} - 1 \ \ \forall k \in \mathcal{K},\ \forall j \in \mathcal{J}
 \end{equation}
 
 
 
-\item \textbf{asdf}
+\item \textbf{Cuando un músico espera.} Un músico $k$ espera en el slot $j$, si está presente pero no tiene que que tocar. Lo anterior se refleja en la restricción \eqref{eq:res7}
 
-\item \textbf{asdf}
+\begin{equation}\label{eq:res7} 
+	r_{kj} - w_{kj} \leq p_{kj} \ \ \forall k \in \mathcal{K},\ \forall j \in \mathcal{J}
+\end{equation}
 
-\item \textbf{asdf}
 
-\item \textbf{asdf}
-  	
+\item \textbf{Asignación a slots.} Las siguientes restricciones permiten hacer la correcta asignación de ensayos a slots. Las restricciones \eqref{eq:res8} y \eqref{eq:res9} dicen respectivamente, que a cada slot sólo puede asignarse un ensayo, y que cada ensayo debe asignarse a tantos slots como duración tenga.    
+
+\begin{equation}\label{eq:res8} 
+	\sum_{i=1}^{m} s_{ij} = 1 \ \ \forall j \in \mathcal{J}
+\end{equation}
+
+
+\begin{equation}\label{eq:res9} 
+	\sum_{j=1}^n s_{ij} = \delta_{i} \ \ \forall i \in \mathcal{I}
+\end{equation}
+
+Las restricciones \eqref{eq:res10}-\eqref{eq:res14} fuerzan a que la asignación de un ensayo $i$ sea en $\delta_i$ slots consecutivos, pues un ensayo individual no debe divirse en partes. La restricción \eqref{eq:res10} asegura que el ensayo $i$ se realice en el slot $j$, si dicho ensayo comienza en el slot $j$ (o antes) y termina al final del slot $j$ (o después)	 
+
+\begin{equation}\label{eq:res10} 
+	s_{ij} \geq start_{ij} + end_{ij} -1 \ \ \forall i \in \mathcal{I}, \ \forall j \in \mathcal{J}
+\end{equation}
+
+la restricción \eqref{eq:res11} indica que el ensayo $i$ ha comenzado en el slot $j+1$, si ha comienza en $j$ o antes y \eqref{eq:res12} sirve como base de la recursión anterior, estableciendo que si el ensayo $i$ va en en el slot $j$, entonces dicho ensayo ya ha comenzado en dicho slot (o antes)
+
+\begin{equation}\label{eq:res11} 
+	start_{ij} \leq start_{i,j+1} \ \ \forall i \in \mathcal{I}, \ \forall j \in \{1,\ldots,n-1\}
+\end{equation}  
+
+\begin{equation}\label{eq:res12} 
+	start_{ij} \geq s_{ij} \ \ \forall i \in \mathcal{I}, \ \forall j \in \mathcal{J}
+\end{equation}
+
+la restricción \eqref{eq:res13} dice que el ensayo $i$ termina en el slot $j$ (o después), si termina en el slot $j+1$ (o después) y \eqref{eq:res14} sirve de base a la recursión, estableciendo que si el ensayo $i$ va en el slot $j$, entonces dicho ensayo termina al final del slot $j$ (o después)  
+
+\begin{equation}\label{eq:res13} 
+	end_{ij} \geq end_{i,j+1} \ \ \forall i \in \mathcal{I}, \ \forall j \in \{1,\ldots,n-1\}
+\end{equation} 
+
+\begin{equation}\label{eq:res14} 
+	end_{ij} \geq s_{ij} \ \ \forall i \in \mathcal{I}, \ \forall j \in \mathcal{J}
+\end{equation}	
+
 \end{itemize}  
+
 
 
 \subsection{Extensión}
